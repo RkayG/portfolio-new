@@ -1,4 +1,4 @@
-import { SkillsHeader } from "@/components/SkillsHeader";
+import { Header } from "@/components/Header";
 import { SkillsCategory } from "@/components/SkillsCategory";
 
 const programmingLanguages = [
@@ -27,12 +27,11 @@ const blockchainDevOps = [
 
 export default function SkillsPage() {
   return (
-    <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
-      <div className="layout-container flex h-full grow flex-col">
-        <div className="flex flex-1 justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
-          <div className="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
-            <SkillsHeader />
-            <main className="flex flex-col gap-10 py-10 md:py-16">
+    <div className="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+      <div className="flex-grow">
+        <div className="mx-auto flex w-full max-w-[960px] flex-col px-4 sm:px-8 lg:px-0">
+          <Header />
+          <main className="flex-1 flex flex-col gap-10 py-10 md:py-16">
               {/* PageHeading */}
               <div className="flex flex-wrap justify-between gap-4 p-4">
                 <div className="flex flex-col gap-3">
@@ -61,8 +60,7 @@ export default function SkillsPage() {
                   skills={blockchainDevOps}
                 />
               </div>
-            </main>
-          </div>
+          </main>
         </div>
       </div>
     </div>
