@@ -30,15 +30,15 @@ export function Header() {
           </Link>
           <Link
             className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
-            href="/projects"
+            href="/skills"
           >
-            Projects
+            Skills
           </Link>
           <Link
             className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
-            href="/blog"
+            href="/projects"
           >
-            Blog
+            Projects
           </Link>
           <Link
             className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
