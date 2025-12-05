@@ -50,7 +50,7 @@ export function Header() {
         <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#8D7B68] dark:bg-[#cf6417] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
           <span className="truncate">Get In Touch</span>
         </button>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div>
     </header>
   );

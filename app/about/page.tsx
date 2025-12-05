@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { ProfileHeader } from "@/components/ProfileHeader";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { Project } from "@/types/project";
 import Link from "next/link";
 
 const skills = [
@@ -92,6 +94,48 @@ const experiences = [
   },
 ];
 
+const featuredProjects: Project[] = [
+  {
+    id: "1",
+    title: "DeFi Trading Platform",
+    description:
+      "A decentralized finance platform for trading digital assets with real-time data.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+    imageAlt: "Screenshot of a DeFi Trading Platform dashboard",
+    technologies: ["React", "Solidity", "Web3.js"],
+    category: "Blockchain",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "2",
+    title: "NFT Marketplace",
+    description:
+      "A full-stack marketplace for creating, buying, and selling unique NFTs on the Ethereum blockchain.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCZRj2kfl4Kqf9MgOEiQnPCCTsifk7GFMfR-LH6rQG01g_CGCOrQ61l7o3oNJS2MA8_q6U85bymKVQ1L90YhzIJ1B_Is-85TVuaFa8kubi549O8ydtF4avD0ubf3byIFC_U5z8nn56Eu_8yTPLHywf8IlJ48Z_ByFRNnxwGXVdXnh9ZRQiViGmlwVlIdPNCdupU-m_DAzjhNF2c_wDxeSjeWsRfTHSPJBobnIUkmRMlMBXtDYEeycVwjfi_enzu41mhD3Z6SmyQwJ0",
+    imageAlt: "Screenshot of an NFT Marketplace with various digital art",
+    technologies: ["Next.js", "TailwindCSS", "Ethers.js"],
+    category: "Blockchain",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "3",
+    title: "E-commerce Website",
+    description:
+      "A modern, responsive e-commerce solution with a custom backend and payment integration.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpau77knzT06L2Xl0r0QhEw6zEUmh41R3nzDJbEyOdvlzvmHgY4uxBAJMRHtCr-bQnAZx89Rf_yg8C6I-HRgrvsdZ1HdXLmk7VUo_ES4M_bnWUfTsaIcILfytwxTwRfHHoqGvrbco4BJhxqMHwAk1aEifp5vJ5k1EgS_d3TkyqkIjN2uAAFBLJGjwT_qrOwVv9MR1l-dqFZMHpfiXHQuS-e7XazQRajAzFMbiFOd-Wel6Dw6jp2eOOLWGtTDfETtrCPEp66Sz0bYg",
+    imageAlt: "Screenshot of an e-commerce website showing product listings",
+    technologies: ["Vue.js", "Node.js", "Stripe API"],
+    category: "Web App",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+  },
+];
+
 export default function AboutPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col">
@@ -119,6 +163,7 @@ export default function AboutPage() {
             </section>
             <SkillsSection skills={skills} />
             <ExperienceSection experiences={experiences} />
+            <ProjectsSection projects={featuredProjects} />
             <section className="mt-20 text-center">
               <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
                 Let&apos;s Build Something Great
