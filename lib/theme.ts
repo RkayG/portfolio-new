@@ -18,14 +18,10 @@ export function useTheme() {
   }, []);
 
   const applyTheme = (newTheme: ThemeMode) => {
+    if (typeof window === "undefined") return;
     const root = document.documentElement;
-    if (newTheme === "dark") {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    } else {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    }
+    root.classList.remove("light", "dark");
+    root.classList.add(newTheme);
     localStorage.setItem("theme", newTheme);
   };
 

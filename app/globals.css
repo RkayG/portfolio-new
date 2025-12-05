@@ -2,27 +2,32 @@
 
 @theme {
   /* Primary Colors */
-  --color-primary: #5D4037;
+  --color-primary: #cf6317;
   
   /* Background Colors */
-  --color-background-light: #F7F5F2;
-  --color-background-dark: #1a1614;
+  --color-background-light: #f8f7f6;
+  --color-background-dark: #211811;
   
   /* Text Colors */
   --color-text-light: #333333;
-  --color-text-dark: #e0ddd9;
+  --color-text-dark: #FDFBF6;
   
   /* Accent Colors */
   --color-accent-light: #e7e2d9;
-  --color-accent-dark: #2c2622;
+  --color-accent-dark: #2a1f17;
   
   /* Subtle Colors */
   --color-subtle-light: #A1887F;
-  --color-subtle-dark: #8d7a71;
+  --color-subtle-dark: #c8a993;
+  
+  /* Additional Colors from design */
+  --color-brown-dark: #4A2E2A;
+  --color-brown-medium: #8D7B68;
+  --color-brown-border: #473324;
 
   /* Font Families */
-  --font-family-display: var(--font-display);
-  --font-family-handwriting: var(--font-handwriting);
+  --font-display: var(--font-display), "Space Grotesk", sans-serif;
+  --font-handwriting: var(--font-handwriting), "Kalam", cursive;
 
   /* Border Radius */
   --radius: 0.25rem;
@@ -31,10 +36,10 @@
   --radius-full: 9999px;
 }
 
-/* Dark mode color overrides */
-.dark {
-  --color-background-light: var(--color-background-dark);
-  --color-text-light: var(--color-text-dark);
-  --color-accent-light: var(--color-accent-dark);
-  --color-subtle-light: var(--color-subtle-dark);
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
