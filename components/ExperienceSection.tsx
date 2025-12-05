@@ -12,7 +12,7 @@ interface ExperienceSectionProps {
 export function ExperienceSection({ experiences }: ExperienceSectionProps) {
   return (
     <section className="mt-16">
-      <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
+      <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
         Professional Experience
       </h2>
       <div className="relative mt-6 pl-6 border-l-2 border-[#8D7B68]/30 dark:border-[#473324]">

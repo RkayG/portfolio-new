@@ -11,7 +11,7 @@ interface SkillsSectionProps {
 export function SkillsSection({ skills }: SkillsSectionProps) {
   return (
     <section className="mt-16">
-      <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
+      <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
         Skills & Technologies
       </h2>
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">

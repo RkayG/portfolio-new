@@ -26,7 +26,9 @@ export function Footer() {
           </a>
           <a
             className="text-[#333333] dark:text-white hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
-            href="#"
+            href="https://github.com/RkayG"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub profile link"
           >
             <svg
@@ -44,7 +46,9 @@ export function Footer() {
           </a>
           <a
             className="text-[#333333] dark:text-white hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
-            href="#"
+            href="https://x.com/gladness_rkay"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Twitter profile link"
           >
             <svg

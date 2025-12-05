@@ -110,7 +110,7 @@ export default function AboutPage() {
               description="A passionate blockchain engineer with a focus on building decentralized solutions that are secure, scalable, and user-friendly. I thrive on solving complex problems and turning innovative ideas into reality."
             />
             <section className="mt-16">
-              <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
+              <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
                 My Story
               </h2>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
@@ -126,7 +126,7 @@ export default function AboutPage() {
             <ExperienceSection experiences={experiences} />
             <ProjectsSection projects={featuredProjects} />
             <section className="mt-20 text-center">
-              <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
+              <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
                 Let&apos;s Build Something Great
               </h2>
               <p className="mt-3 mx-auto max-w-lg text-base text-[#333333]/80 dark:text-[#c8a993]">
@@ -135,7 +135,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/projects"
-                className="mt-6 inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#8D7B68] dark:bg-[#cf6417] text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mx-auto"
+                className="mt-6 inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#8D6E63] dark:bg-[#cf6417] text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mx-auto"
               >
                 <span className="truncate">View My Work</span>
               </Link>

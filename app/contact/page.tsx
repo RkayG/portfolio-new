@@ -35,13 +35,13 @@ export default function ContactPage() {
                   showArrow
                 />
                 <ContactLink
-                  href="#"
+                  href="https://www.linkedin.com/in/gladness-rufus/"
                   icon="linkedin"
                   label="LinkedIn Profile"
                   showArrow
                 />
                 <ContactLink
-                  href="#"
+                  href="https://github.com/RkayG"
                   icon="github"
                   label="GitHub Profile"
                   showArrow

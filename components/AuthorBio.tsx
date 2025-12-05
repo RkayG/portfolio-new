@@ -26,6 +26,8 @@ export function AuthorBio({ author }: AuthorBioProps) {
             <a
               className="text-[#A1887F] dark:text-[#8d7a71] hover:text-[#5D4037] dark:hover:text-[#5D4037] transition-colors"
               href={author.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`Link to ${author.name}'s Twitter profile`}
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -37,6 +39,8 @@ export function AuthorBio({ author }: AuthorBioProps) {
             <a
               className="text-[#A1887F] dark:text-[#8d7a71] hover:text-[#5D4037] dark:hover:text-[#5D4037] transition-colors"
               href={author.github}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`Link to ${author.name}'s GitHub profile`}
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

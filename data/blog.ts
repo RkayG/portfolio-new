@@ -29,8 +29,8 @@ export const allBlogPosts: BlogPost[] = [
       bio: "Rufus is a passionate software and blockchain engineer with over 8 years of experience building secure and scalable decentralized applications. He specializes in Solidity and smart contract security.",
       avatar:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuDgzNc16cZncjbs5YoN6iY-wb-xVhUGX_YXz4_PbqCsn7cUp1Bkv5hSG9FMv2aTPK0wQ2K79ozO6cfk0a5ENkOmKcduOpM0f0K6_X-pmCLKwbqruraXlHJ0d9FmI303H_t0yX7IiYas7-tUZLqFDtvyxT-9UI2Wtxv2jekAKEa3RGJK6QqO36c4O_m3iSp0Y-oo3c0vhoDSQsuOATr967oowHFFCwSZp7OIoGtNddE1RWchOrWghqs9d9VYu06jBySojWBreB99K6I",
-      twitter: "#",
-      github: "#",
+      twitter: "https://x.com/gladness_rkay",
+      github: "https://github.com/RkayG",
     },
     content: `<p>Smart contracts are the backbone of decentralized applications, automating agreements and transactions on the blockchain. However, their immutable nature means that vulnerabilities can lead to irreversible losses. This makes security auditing not just a best practice, but an absolute necessity. In this post, we'll explore the critical aspects of smart contract security audits, from common vulnerabilities to the best practices that ensure robust and secure code.</p>
 

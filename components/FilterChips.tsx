@@ -19,7 +19,7 @@ export function FilterChips({
           onClick={() => onCategoryChange(category)}
           className={`flex h-8 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-full pl-4 pr-4 transition-colors ${
             activeCategory === category
-              ? "bg-primary"
+              ? "bg-primary text-white"
               : "bg-[#4A2E2A]/10 dark:bg-[#473324] hover:bg-primary/50"
           }`}
         >

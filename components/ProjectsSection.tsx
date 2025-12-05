@@ -17,7 +17,7 @@ export function ProjectsSection({
   return (
     <section className="mt-16">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-handwriting text-3xl font-bold text-[#4A2E2A] dark:text-[#c8a993]">
+        <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
           Featured Projects
         </h2>
         {showViewAll && projects.length > 3 && (
