@@ -13,16 +13,14 @@ export function ProfileHeader({
   description,
   imageUrl,
 }: ProfileHeaderProps) {
+  const profileImage = imageUrl || "/profile-image.jpeg";
+
   return (
     <section className="flex flex-col gap-8 @container md:flex-row md:items-center">
       <div className="flex-shrink-0">
         <div
           className="mx-auto bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 ring-4 ring-offset-4 ring-[#8D7B68]/30 dark:ring-[#473324] dark:ring-offset-[#211811]"
-          style={
-            imageUrl
-              ? { backgroundImage: `url(${imageUrl})` }
-              : { backgroundColor: "#8D7B68" }
-          }
+          style={{ backgroundImage: `url(${profileImage})` }}
         />
       </div>
       <div className="flex flex-col justify-center text-center md:text-left">

@@ -28,6 +28,7 @@ const config: Config = {
         "admin-success": "var(--color-admin-success)",
         "admin-neutral": "var(--color-admin-neutral)",
         "admin-danger": "var(--color-admin-danger)",
+        "brand-brown": "var(--color-brand-brown)",
       },
     },
   },

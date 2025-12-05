@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { AdminSidebar } from "@/components/AdminSidebar";
 import { BlogPostsTable } from "@/components/BlogPostsTable";
 
@@ -14,12 +15,15 @@ export default function AdminBlogPage() {
             <h1 className="text-[#4E342E] dark:text-[#D7CCC8] handwriting-font text-5xl font-bold tracking-wide">
               Blog Posts Management
             </h1>
-            <button className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#4E342E] px-5 text-sm font-bold text-white shadow-md hover:bg-[#4E342E]/90 transition-colors">
+            <Link
+              href="/admin/blog/new"
+              className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#4E342E] px-5 text-sm font-bold text-white shadow-md hover:bg-[#4E342E]/90 transition-colors"
+            >
               <span className="material-symbols-outlined text-base">
                 add_circle
               </span>
               <span className="truncate">Create New Post</span>
-            </button>
+            </Link>
           </div>
 
           {/* Table */}
