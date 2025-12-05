@@ -2,6 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthorBio } from "@/components/AuthorBio";
 import { CommentsSection } from "@/components/CommentsSection";
+import { SocialShare } from "@/components/SocialShare";
+import { RelatedPosts } from "@/components/RelatedPosts";
 import { allBlogPosts } from "@/data/blog";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -64,18 +66,28 @@ export default async function BlogPostDetailPage({
               </div>
             )}
 
+            <SocialShare
+              title={post.title}
+              url={`/blog/${post.slug}`}
+            />
+
             {post.content && (
-              <article
-                className="prose prose-lg dark:prose-invert max-w-none text-[#333333] dark:text-[#e0ddd9] text-base leading-relaxed space-y-6 pt-8"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              <article className="prose prose-lg dark:prose-invert max-w-none text-[#333333] dark:text-[#e0ddd9] text-base leading-relaxed space-y-6">
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              </article>
+            )}
+
+            {!post.content && (
+              <article className="prose prose-lg dark:prose-invert max-w-none text-[#333333] dark:text-[#e0ddd9] text-base leading-relaxed space-y-6">
+                <p>Content coming soon...</p>
+              </article>
             )}
 
             {post.author && <AuthorBio author={post.author} />}
 
-            {post.comments && post.comments.length > 0 && (
-              <CommentsSection comments={post.comments} postSlug={post.slug} />
-            )}
+            <CommentsSection comments={post.comments || []} postSlug={post.slug} />
+
+            <RelatedPosts currentPostSlug={post.slug} allPosts={allBlogPosts} />
           </main>
         </div>
       </div>

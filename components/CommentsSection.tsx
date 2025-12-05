@@ -18,10 +18,12 @@ export function CommentsSection({ comments, postSlug }: CommentsSectionProps) {
     setCommentText("");
   };
 
+  const displayComments = comments || [];
+
   return (
     <section className="mt-16 pt-8 border-t border-[#e7e2d9] dark:border-[#2c2622]/50">
       <h2 className="font-handwriting text-[#5D4037] text-4xl font-bold mb-8">
-        Comments ({comments.length})
+        Comments ({displayComments.length})
       </h2>
 
       <div className="mb-12">
@@ -51,7 +53,8 @@ export function CommentsSection({ comments, postSlug }: CommentsSectionProps) {
       </div>
 
       <div className="space-y-8">
-        {comments.map((comment) => (
+        {displayComments.length > 0 ? (
+          displayComments.map((comment) => (
           <div key={comment.id} className="flex items-start gap-4">
             <img
               className="w-12 h-12 rounded-full object-cover"
@@ -72,7 +75,8 @@ export function CommentsSection({ comments, postSlug }: CommentsSectionProps) {
               </p>
             </div>
           </div>
-        ))}
+          ))
+        ) : null}
       </div>
     </section>
   );

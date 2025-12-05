@@ -9,6 +9,8 @@ export const allBlogPosts: BlogPost[] = [
     date: "October 26, 2023",
     categories: ["Blockchain", "Tutorials"],
     slug: "demystifying-layer-2-scaling-solutions",
+    featuredImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuATeBsszFAnTx3Zzj3wX0hO7CgSuOcGIiEk9oW5l0xSUNa9Vf8dmhKJec8cVMRvOB92QrB3Hb8TFRS8QLlcqksH1eZXecqv3baonskdJnGPOhTZ23SQOYpoaG_vroKl5qrsasU5SwUwr325dRS2PSON-cxo_ojUJD_SQD_sKRYPyKkrdm0112HrGwdN6Apy_3AI-mHatJsITvxhxVgsito2Jw4zThrmupCb0_WCBjq8ghHa1C8Nc4OMDD_L141qH__p1E9fxAAGZHE",
   },
   {
     id: "2",
@@ -32,15 +34,20 @@ export const allBlogPosts: BlogPost[] = [
     },
     content: `<p>Smart contracts are the backbone of decentralized applications, automating agreements and transactions on the blockchain. However, their immutable nature means that vulnerabilities can lead to irreversible losses. This makes security auditing not just a best practice, but an absolute necessity. In this post, we'll explore the critical aspects of smart contract security audits, from common vulnerabilities to the best practices that ensure robust and secure code.</p>
 
-<h2>Common Vulnerabilities</h2>
+<h2 class="font-handwriting text-primary !text-4xl !font-bold !mt-12 !mb-4">Common Vulnerabilities</h2>
 
 <p>Understanding common pitfalls is the first step towards writing secure contracts. Auditors are trained to hunt for these specific issues, which often arise from subtle logical errors or misunderstandings of the Ethereum Virtual Machine (EVM).</p>
 
-<blockquote>"The code is law, but the law can have loopholes. A security audit is the process of finding those loopholes before malicious actors do."</blockquote>
+<blockquote class="border-l-4 border-primary bg-primary/10 dark:bg-primary/20 p-4 rounded-r-lg"><p class="!m-0">"The code is law, but the law can have loopholes. A security audit is the process of finding those loopholes before malicious actors do."</p></blockquote>
 
 <p>Some of the most notorious vulnerabilities include reentrancy attacks, integer overflow/underflow, and front-running. A reentrancy attack, famously exploited in the DAO hack, allows an attacker to repeatedly withdraw funds from a contract before its balance is updated. Let's look at a code example.</p>
 
-<pre><code class="language-solidity">// Insecure: vulnerable to reentrancy
+<div class="relative group">
+<button class="absolute top-2 right-2 p-1.5 bg-accent-dark text-text-dark rounded-md text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+<span class="material-symbols-outlined !text-base">content_copy</span>
+Copy
+</button>
+<pre class="language-solidity bg-accent-dark !text-text-dark p-4 rounded-lg overflow-x-auto"><code class="language-solidity">// Insecure: vulnerable to reentrancy
 function withdraw() public {
     uint amount = userBalances[msg.sender];
     (bool sent, ) = msg.sender.call{value: amount}("");
@@ -55,8 +62,9 @@ function secureWithdraw() public {
     (bool sent, ) = msg.sender.call{value: amount}("");
     require(sent, "Failed to send Ether");
 }</code></pre>
+</div>
 
-<h2>Best Practices for Auditing</h2>
+<h2 class="font-handwriting text-primary !text-4xl !font-bold !mt-12 !mb-4">Best Practices for Auditing</h2>
 
 <p>A thorough audit involves more than just scanning for known vulnerabilities. It's a comprehensive process that includes static analysis, dynamic analysis, and manual code review. The goal is to understand the contract's business logic and identify any potential deviations from its intended behavior.</p>
 
@@ -66,7 +74,7 @@ function secureWithdraw() public {
 
 <p>Effective auditing combines automated tools with human expertise. Tools can quickly identify common issues, but a skilled auditor is needed to uncover complex logical flaws. The final report should provide a clear, actionable list of findings, categorized by severity, along with recommendations for remediation.</p>
 
-<h3>Conclusion</h3>
+<h3 class="font-handwriting text-primary !text-3xl !font-bold !mt-10 !mb-4">Conclusion</h3>
 
 <p>Smart contract security is a continuous process, not a one-time checklist. A rigorous audit provides a critical snapshot of a contract's security posture at a specific point in time, building trust and confidence in the decentralized ecosystem. By investing in thorough security practices, developers can protect user funds and contribute to a safer, more reliable blockchain future.</p>`,
     comments: [
@@ -107,6 +115,8 @@ function secureWithdraw() public {
     date: "August 02, 2023",
     categories: ["Web Development", "Tutorials"],
     slug: "building-modern-dapp-nextjs-ethers",
+    featuredImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBJ6CmzL1KtwHGbq3W5tubudEEvFbAqKnp2wspqsbX3zEoDrNXUge40CsdjhE3ic0ee3np4rBrr1eHq87E1Kf36Lx_1m6kIC2MBsyOc7t6nNMyVwli4-tqGyTTTPBwAQobDxvQN3KpPpbOMVjRBVLU_HluO4j6Kqy8k7okI73PlBY96kwDt4ykrew1KachOwMsDllHcIpluUUI15FHoU1KQkpY4J0bIHni5PO0XOfA1gFTYlYC981qXl7F4qS0bEeXuED7XOQCbLb0",
   },
 ];
 
