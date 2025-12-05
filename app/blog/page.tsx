@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { BlogSidebar } from "@/components/BlogSidebar";
 import { Pagination } from "@/components/Pagination";
@@ -131,6 +132,7 @@ export default function BlogPage() {
           </main>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

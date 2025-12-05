@@ -25,9 +25,24 @@
   --color-brown-medium: #8D7B68;
   --color-brown-border: #473324;
 
+  /* Admin Panel Colors */
+  --color-admin-primary: #4E342E;
+  --color-admin-primary-light: #D7CCC8;
+  --color-admin-primary-medium: #795548;
+  --color-admin-background-light: #FAFAFA;
+  --color-admin-background-dark: #1a1a1a;
+  --color-admin-text-light: #1f1f1f;
+  --color-admin-text-dark: #e0e0e0;
+  --color-admin-border-light: #D7CCC8;
+  --color-admin-border-dark: #333333;
+  --color-admin-success: #4CAF50;
+  --color-admin-neutral: #9E9E9E;
+  --color-admin-danger: #D32F2F;
+
   /* Font Families */
   --font-display: var(--font-display), "Space Grotesk", sans-serif;
   --font-handwriting: var(--font-handwriting), "Kalam", cursive;
+  --font-caveat: var(--font-caveat), "Caveat", cursive;
 
   /* Border Radius */
   --radius: 0.25rem;
@@ -144,4 +159,9 @@
 .dark .prose pre {
   background-color: #2c2622;
   color: #e0ddd9;
+}
+
+/* Admin Panel Styles */
+.handwriting-font {
+  font-family: var(--font-caveat);
 }
