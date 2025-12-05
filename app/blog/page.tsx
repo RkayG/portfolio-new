@@ -77,7 +77,7 @@ export default function BlogPage() {
           <main className="flex-1 mt-8 md:mt-12">
             {/* PageHeading */}
             <div className="flex flex-wrap justify-between gap-3 p-4">
-              <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] min-w-72 font-handwriting text-gray-900 dark:text-white">
+              <h1 className="text-primary text-4xl md:text-5xl font-handwriting font-bold leading-tight tracking-[-0.033em] min-w-72">
                 Thoughts & Articles
               </h1>
             </div>

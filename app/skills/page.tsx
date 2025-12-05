@@ -35,10 +35,10 @@ export default function SkillsPage() {
               {/* PageHeading */}
               <div className="flex flex-wrap justify-between gap-4 p-4">
                 <div className="flex flex-col gap-3">
-                  <p className="text-[#333333] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                  <p className="text-primary text-4xl md:text-5xl font-handwriting font-bold leading-tight tracking-[-0.033em]">
                     Skills & Technologies
                   </p>
-                  <p className="text-[#c8a993] max-w-2xl text-base font-normal leading-normal">
+                  <p className="text-[#333333]/80 dark:text-[#c8a993] max-w-2xl text-base font-normal leading-normal">
                     A comprehensive overview of my technical expertise, from
                     programming languages and frameworks to blockchain and
                     DevOps.

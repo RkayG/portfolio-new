@@ -10,7 +10,7 @@ export default function Home() {
           <Header />
           <main className="flex-1 flex items-center justify-center py-20">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark font-handwriting">
+              <h1 className="text-4xl md:text-5xl font-semibold text-primary dark:text-text-dark font-handwriting">
                 Portfolio - Rufus Gladness
               </h1>
               <p className="mt-4 text-subtle-light dark:text-subtle-dark mb-6 text-lg">
@@ -19,13 +19,13 @@ export default function Home() {
               <div className="flex gap-4 justify-center">
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#8D7B68] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#8D6E63] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
                 >
                   View About Me
                 </Link>
                 <Link
                   href="/skills"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#8D7B68] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#8D6E63] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
                 >
                   View Skills
                 </Link>

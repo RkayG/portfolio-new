@@ -10,7 +10,9 @@ export function Footer() {
         <div className="flex items-center gap-4">
           <a
             className="text-[#333333] dark:text-white hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
-            href="#"
+            href="https://www.linkedin.com/in/gladness-rufus/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn profile link"
           >
             <svg

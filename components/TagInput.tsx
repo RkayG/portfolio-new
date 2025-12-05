@@ -26,31 +26,17 @@ export function TagInput({ tags, onTagsChange }: TagInputProps) {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="relative w-full">
-        <input
-          className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-[#6D4C41]/50 border border-slate-300 dark:border-[#654834] bg-white dark:bg-[#32241a] focus:border-[#6D4C41] dark:focus:border-[#654834] h-11 placeholder:text-slate-400 dark:placeholder:text-[#c8a993] px-3 text-sm font-normal leading-normal"
-          placeholder="Add tags..."
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-          <span className="material-symbols-outlined text-slate-400 dark:text-slate-500 text-lg">
-            add_circle
-          </span>
-        </div>
-      </div>
       {tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-2">
+        <div className="flex flex-wrap gap-2 mb-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="flex items-center gap-1.5 bg-[#6D4C41]/10 dark:bg-amber-100/10 text-[#6D4C41] dark:text-amber-100 text-xs font-medium px-2 py-1 rounded-full"
+              className="inline-flex items-center rounded-full bg-[#6D4C41]/20 dark:bg-[#6D4C41]/30 px-3 py-1 text-sm font-medium text-[#6D4C41] dark:text-[#1b130e] dark:text-[#f3ece7]"
             >
               {tag}
               <button
                 onClick={() => removeTag(tag)}
-                className="text-[#6D4C41]/60 dark:text-amber-100/60 hover:text-[#6D4C41] dark:hover:text-amber-100"
+                className="ml-1.5 text-[#6D4C41]/60 dark:text-[#f3ece7]/60 hover:text-[#6D4C41] dark:hover:text-[#f3ece7]"
               >
                 <span
                   className="material-symbols-outlined"
@@ -63,6 +49,13 @@ export function TagInput({ tags, onTagsChange }: TagInputProps) {
           ))}
         </div>
       )}
+      <input
+        className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1b130e] dark:text-[#f3ece7] focus:outline-0 focus:ring-2 focus:ring-[#6D4C41]/50 border border-[#e7d9d0] dark:border-[#3a2e25] bg-[#fcfaf8] dark:bg-[#211811] h-14 placeholder:text-[#976d4e] dark:placeholder:text-[#a1887f] p-[15px] text-base font-normal leading-normal"
+        placeholder="Add a new tag..."
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={handleKeyDown}
+      />
     </div>
   );
 }

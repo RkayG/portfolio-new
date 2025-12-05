@@ -190,14 +190,15 @@ export function BlogPostsTable() {
                 <td className="px-6 py-4">{getStatusBadge(post.status)}</td>
                 <td className="px-6 py-4">
                   <div className="flex items-center justify-center gap-4">
-                    <button
+                    <Link
+                      href={`/admin/blog/${post.slug}/edit`}
                       className="text-[#795548] dark:text-[#D7CCC8]/70 hover:text-[#4E342E] dark:hover:text-[#D7CCC8]"
                       title="Edit"
                     >
                       <span className="material-symbols-outlined text-xl">
                         edit
                       </span>
-                    </button>
+                    </Link>
                     <Link
                       href={`/blog/${post.slug}`}
                       target="_blank"
