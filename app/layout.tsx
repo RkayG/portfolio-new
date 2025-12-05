@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Kalam, Caveat, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { MobileBottomNav } from "@/components/MobileBottomNav";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -61,7 +62,10 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${kalam.variable} ${caveat.variable} ${inter.variable} font-display antialiased bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <MobileBottomNav />
+        </ThemeProvider>
       </body>
     </html>
   );
