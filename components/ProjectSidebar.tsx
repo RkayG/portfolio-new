@@ -14,7 +14,7 @@ export function ProjectSidebar({
       <div className="sticky top-24 flex flex-col gap-8">
         {role && (
           <div className="bg-white dark:bg-[#2C231A] p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-            <h3 className="font-handwriting text-2xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+            <h3 className="font-handwriting text-2xl  text-[#5D4037] dark:text-[#8D6E63] mb-3">
               My Role
             </h3>
             <p className="text-sm leading-6 text-[#333333]/80 dark:text-[#E0E0E0]/80">
@@ -28,7 +28,7 @@ export function ProjectSidebar({
           </div>
         )}
         <div className="bg-white dark:bg-[#2C231A] p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-          <h3 className="font-handwriting text-2xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+          <h3 className="font-handwriting text-2xl  text-[#5D4037] dark:text-[#8D6E63] mb-4">
             Technologies Used
           </h3>
           <div className="flex flex-wrap gap-2">

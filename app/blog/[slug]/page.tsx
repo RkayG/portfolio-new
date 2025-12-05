@@ -12,12 +12,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPostDetailPage({
+export default async function BlogPostDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = allBlogPosts.find((p) => p.slug === params.slug);
+  // Await params in Next.js 16+
+  const { slug } = await params;
+  const post = allBlogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
