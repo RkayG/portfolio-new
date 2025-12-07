@@ -266,5 +266,40 @@ export const allProjects: Project[] = [
     githubUrl: "#",
     slug: "supply-chain-dapp",
   },
+  {
+    id: "10",
+    title: "AdFriend Extension",
+    description:
+      "A Chrome extension that transforms intrusive web advertisements into personalized movie recommendations, helping users discover their next favorite film while browsing.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+    imageAlt: "AdFriend Chrome extension showing movie recommendations replacing ads",
+    technologies: [
+      "Chrome Extension",
+      "React",
+      "JavaScript",
+      "TMDb API",
+      "Chrome Storage API",
+      "Content Scripts",
+      "Manifest V3",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://screenrec.com/share/XRNehEHpSc",
+    githubUrl: "#",
+    slug: "adfriend-extension",
+    overview:
+      "AdFriend is an innovative Chrome extension that reimagines the web browsing experience by replacing intrusive advertisements with personalized movie recommendations. Instead of being distracted by ads, users discover their next favorite movie while browsing their favorite websites. The extension intelligently detects ad containers across the web and seamlessly replaces them with interactive movie cards featuring trailers, reviews, ratings, and watchlist management. Built with React and integrated with TMDb API, AdFriend provides a privacy-focused, user-friendly alternative to traditional advertising.",
+    challenges: [
+      "Implementing real-time ad detection across diverse website structures required developing a robust content script that could identify various ad container patterns without breaking page layouts. The solution involved creating flexible CSS selectors and DOM mutation observers that adapt to different ad formats while maintaining page functionality.",
+      "Building seamless integration with TMDb API while handling rate limits and ensuring fast response times. This required implementing intelligent caching strategies, request batching, and fallback mechanisms to provide smooth user experience even during API delays or failures.",
+      "Designing memory-efficient content scripts that don't impact page performance. The challenge was creating a lightweight injection system that replaces ads without causing layout shifts or consuming excessive browser resources, requiring careful optimization of DOM manipulation and event handling.",
+      "Creating a responsive movie card interface that adapts to various ad container sizes while maintaining visual appeal. This required developing flexible CSS layouts and responsive design patterns that work across different website layouts and screen sizes.",
+    ],
+    results:
+      "AdFriend successfully transforms the browsing experience by replacing ads with engaging movie content, providing users with a more enjoyable and productive web experience. The extension demonstrates seamless integration with web pages, maintaining site functionality while offering valuable entertainment recommendations. Users can discover new movies, watch trailers, read reviews, and manage watchlists directly from their browsing experience. The privacy-focused approach with local storage and no tracking ensures user trust, while the intuitive interface makes movie discovery effortless. The project showcases expertise in Chrome extension development, API integration, and user experience design.",
+    role: "Full-Stack Developer & Extension Architect",
+    roleDescription:
+      "Designed and developed the complete Chrome extension including ad detection algorithms, TMDb API integration, interactive movie cards, popup interface, and watchlist management system with Chrome Storage Sync.",
+  },
 ];
 
