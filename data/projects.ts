@@ -118,44 +118,6 @@ export const allProjects: Project[] = [
   },
   {
     id: "3",
-    title: "SmartMention",
-    description:
-      "A social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
-    imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
-    imageAlt: "SmartMention social listening dashboard showing real-time mentions and analytics",
-    technologies: [
-      "Python",
-      "Node.js",
-      "React",
-      "PostgreSQL",
-      "Redis",
-      "Web Scraping",
-      "NLP",
-      "Sentiment Analysis",
-      "Express",
-      "WebSocket",
-    ],
-    category: "Web App",
-    liveDemoUrl: "#",
-    githubUrl: "https://github.com/RkayG/brandtrack",
-    slug: "smartmention",
-    overview:
-      "SmartMention is an enterprise-grade social listening and signal tracking platform that enables brands to monitor online conversations across thousands of platforms in real-time. The system tracks public mentions tied to custom keywords and hashtags, performing advanced sentiment analysis, impact assessment, and confidence scoring. The platform features a powerful crawler engine that continuously scans multiple data sources, filters mentions into topics, extracts leads, identifies crises and trends, detects anomalies, and provides comprehensive analytics. Projects can be segmented to target specific campaigns or topics, with customizable thresholds for signal relevance and personalized alerts to stay ahead of trends.",
-    challenges: [
-      "Building a scalable crawler engine capable of monitoring thousands of platforms simultaneously while respecting rate limits and avoiding detection. The solution required implementing distributed crawling architecture with intelligent scheduling, proxy rotation, and adaptive rate limiting to ensure continuous data collection without service interruptions.",
-      "Implementing real-time sentiment analysis and confidence scoring across diverse content types (text, images, videos) required integrating multiple NLP models and creating a unified scoring system. The challenge was balancing accuracy with performance, ensuring sub-second processing times while maintaining high precision in sentiment detection across different languages and contexts.",
-      "Designing an efficient data pipeline that could process millions of mentions daily, filter them into relevant topics, extract actionable leads, and detect anomalies in real-time. This required building a sophisticated event-driven architecture with stream processing, intelligent deduplication, and machine learning models for topic clustering and anomaly detection.",
-      "Creating a flexible project segmentation system that allows users to configure keywords, sources, and thresholds per project while maintaining query performance at scale. The solution involved implementing efficient indexing strategies, materialized views for complex aggregations, and caching layers to support fast filtering and analytics across multiple concurrent projects.",
-    ],
-    results:
-      "SmartMention successfully processes millions of mentions daily across thousands of platforms, providing brands with real-time insights into their online presence. The crawler engine maintains 99.5% uptime and processes signals with an average latency of under 2 seconds. The sentiment analysis system achieves 92% accuracy across multiple languages, and the lead extraction feature has helped clients identify and convert high-value opportunities. The anomaly detection system successfully flags potential crises before they escalate, enabling proactive brand management. The platform's analytics dashboard provides comprehensive metrics that have enabled data-driven decision making, with clients reporting a 40% improvement in response times to critical mentions and a 30% increase in lead conversion rates.",
-    role: "Backend Engineer & Crawler Architect",
-    roleDescription:
-      "Built the complete crawler engine architecture and data processing pipeline, including real-time mention tracking, sentiment analysis integration, topic filtering, lead extraction, anomaly detection, and scheduler systems. Assisted the frontend team in building the analytics dashboard and project configuration interfaces.",
-  },
-  {
-    id: "4",
     title: "DeFi Trading Platform",
     description:
       "A decentralized finance platform for trading digital assets with real-time data.",
@@ -169,7 +131,7 @@ export const allProjects: Project[] = [
     slug: "defi-trading-platform",
   },
   {
-    id: "5",
+    id: "4",
     title: "NFT Marketplace",
     description:
       "A full-stack marketplace for creating, buying, and selling unique NFTs on the Ethereum blockchain.",
@@ -183,7 +145,7 @@ export const allProjects: Project[] = [
     slug: "nft-marketplace",
   },
   {
-    id: "6",
+    id: "5",
     title: "E-commerce Platform",
     description:
       "A modern, responsive e-commerce solution with a custom backend and payment integration.",
@@ -214,7 +176,7 @@ export const allProjects: Project[] = [
       "Responsible for backend architecture, database design, and frontend implementation.",
   },
   {
-    id: "7",
+    id: "6",
     title: "Task Management App",
     description:
       "A collaborative tool to help teams organize, track, and manage their work efficiently.",
@@ -228,7 +190,7 @@ export const allProjects: Project[] = [
     slug: "task-management-app",
   },
   {
-    id: "8",
+    id: "7",
     title: "Personal Blog Engine",
     description:
       "A lightweight and fast blog built with a static site generator and headless CMS.",
@@ -242,7 +204,7 @@ export const allProjects: Project[] = [
     slug: "personal-blog-engine",
   },
   {
-    id: "9",
+    id: "8",
     title: "Supply Chain dApp",
     description:
       "A blockchain application to track goods from origin to consumer with full transparency.",

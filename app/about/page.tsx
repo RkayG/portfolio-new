@@ -86,6 +86,13 @@ const experiences = [
       "Built the Cxperia platform, a customer loyalty platform for cosmetic brands to design and manage dynamic product experiences. Led the development of the entire platform architecture, focusing on creating engaging and personalized customer experiences.",
   },
   {
+    period: "2024 - Nov 2024",
+    title: "Head of IT",
+    company: "BettyBet",
+    description:
+      "Managed IT operations and infrastructure for a virtual betting company. Responsible for overseeing technical systems, ensuring platform reliability, and leading the IT team to support business operations.",
+  },
+  {
     period: "2019 - 2021",
     title: "Full-Stack Developer",
     company: "Innovatech Solutions",
@@ -121,12 +128,10 @@ export default function AboutPage() {
                 My Story
               </h2>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                Detailing my journey into software and blockchain development,
-                from my initial spark of curiosity to my current role. I will
-                discuss my passion for technology, key learning experiences,
-                and the pivotal moments that have shaped my professional path
-                and expertise in creating meaningful and impactful digital
-                solutions.
+                I didn&apos;t start as a traditional software engineer—I started as a crypto trader. Watching markets move every day made me deeply curious about how blockchains and cryptocurrencies actually work under the hood, which pulled me into programming. Once I got into software development, I realized there&apos;s a big gap between casual scripts, regular web apps, and the kind of engineering needed to build real blockchain systems.
+              </p>
+              <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
+                Instead of jumping straight into smart contracts, I first focused on mastering Web2 fundamentals: building APIs, architecting backends, working with databases, and shipping production systems end-to-end. With that foundation, I moved into the EVM and Solana ecosystems, exploring AMMs, MEV bots, trading algorithms, and full-stack dApps. Today I combine that trading background with solid engineering experience to design and build blockchain and fintech platforms that are not just clever, but reliable, secure, and scalable.
               </p>
             </section>
             <SkillsSection skills={skills} />
