@@ -43,11 +43,11 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
               Your browser does not support the video tag.
             </video>
           ) : (
-            <img
-              className="w-full h-full object-cover"
+          <img
+            className="w-full h-full object-cover"
               src={images[videoUrl ? currentIndex - 1 : currentIndex]}
-              alt={imageAlt}
-            />
+            alt={imageAlt}
+          />
           )}
         </div>
         {totalItems > 1 && (
@@ -93,23 +93,23 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
           {images.map((image, index) => {
             const itemIndex = videoUrl ? index + 1 : index;
             return (
-              <div
-                key={index}
+            <div
+              key={index}
                 onClick={() => selectItem(itemIndex)}
-                className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${
+              className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${
                   itemIndex === currentIndex
-                    ? "border-[#8D6E63] shadow-md"
-                    : "border-transparent hover:border-[#8D6E63]/50"
-                }`}
-              >
-                <img
-                  className={`w-full h-full object-cover transition-opacity ${
+                  ? "border-[#8D6E63] shadow-md"
+                  : "border-transparent hover:border-[#8D6E63]/50"
+              }`}
+            >
+              <img
+                className={`w-full h-full object-cover transition-opacity ${
                     itemIndex === currentIndex ? "opacity-100" : "opacity-70 hover:opacity-100"
-                  }`}
-                  src={image}
-                  alt={`${imageAlt} - Image ${index + 1}`}
-                />
-              </div>
+                }`}
+                src={image}
+                alt={`${imageAlt} - Image ${index + 1}`}
+              />
+            </div>
             );
           })}
         </div>

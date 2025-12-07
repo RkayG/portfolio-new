@@ -98,6 +98,20 @@ const experiences = [
       "Built the Cxperia platform, a customer loyalty platform for cosmetic brands to design and manage dynamic product experiences. Led the development of the entire platform architecture, focusing on creating engaging and personalized customer experiences.",
   },
   {
+    period: "2024 - 2025",
+    title: "Remote Backend / Python Instructor",
+    company: "FuturDevs",
+    description:
+      "Taught backend development and Python programming to students in a remote learning environment. Designed and delivered comprehensive curriculum covering Python fundamentals, backend architecture, API development, database design, and best practices for building scalable applications.",
+  },
+  {
+    period: "Feb 2025 - May 2025",
+    title: "Contract Developer",
+    company: "Primegrills",
+    description:
+      "Worked as a backend developer building an event-driven microservices architecture for the company. Developed a custom POS ordering system using cutting-edge technologies including Django, React, Vite, PostgreSQL, Redis, RabbitMQ, and WebSockets, ensuring high performance even under massive traffic loads.",
+  },
+  {
     period: "2024 - Nov 2024",
     title: "Head of IT",
     company: "BettyBet",
