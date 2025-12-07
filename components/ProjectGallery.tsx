@@ -44,7 +44,7 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
             </video>
           ) : (
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
               src={images[videoUrl ? currentIndex - 1 : currentIndex]}
             alt={imageAlt}
           />

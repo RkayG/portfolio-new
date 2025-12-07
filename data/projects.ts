@@ -48,7 +48,7 @@ export const allProjects: Project[] = [
     description:
       "An advanced social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
     imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126610/Screenshot_26_bzyjmb.png",
     imageAlt: "SmartMention social listening dashboard showing analytics and signal tracking",
     technologies: [
       "Python",
@@ -64,6 +64,19 @@ export const allProjects: Project[] = [
     liveDemoUrl: "#",
     githubUrl: "#",
     slug: "smartmention",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126610/Screenshot_26_bzyjmb.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126602/Screenshot_27_m1kiyg.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126599/Screenshot_28_tpqus6.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126594/Screenshot_29_djm3dp.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126593/Screenshot_30_xttcas.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126592/Screenshot_35_xojffv.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126592/Screenshot_36_zffg2r.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126592/Screenshot_31_xgrqs2.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126591/Screenshot_32_v3abhh.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126590/Screenshot_34_i0npfd.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126590/Screenshot_33_aoxhgb.png",
+    ],
     overview:
       "SmartMention is a comprehensive social listening and signal tracking platform that enables brands to monitor online conversations in real-time across thousands of platforms. The system tracks public mentions tied to custom keywords and hashtags, filtering by sentiment, confidence score, and impact rating. Projects can be segmented to target specific campaigns or topics, providing brands with actionable insights into their online presence, emerging trends, potential crises, and lead opportunities.",
     challenges: [
