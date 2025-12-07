@@ -272,7 +272,7 @@ export const allProjects: Project[] = [
     description:
       "A Chrome extension that transforms intrusive web advertisements into personalized movie recommendations, helping users discover their next favorite film while browsing.",
     imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129109/adfriend-demo1_rnykwo.png",
     imageAlt: "AdFriend Chrome extension showing movie recommendations replacing ads",
     technologies: [
       "Chrome Extension",
@@ -285,8 +285,17 @@ export const allProjects: Project[] = [
     ],
     category: "Web App",
     liveDemoUrl: "https://screenrec.com/share/XRNehEHpSc",
-    githubUrl: "#",
+    githubUrl: "https://github.com/RkayG/ad-friend",
     slug: "adfriend-extension",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129109/adfriend-demo1_rnykwo.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129101/ad-replace-demo2_fndblq.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129109/movie-card-features_cup9k7.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129543/movie-card-trailer_ob2c1h.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129097/popup_jdvo0c.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129344/trailer_lz2zrr.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765129347/watchlist_12_s6hqrj.png",
+    ],
     overview:
       "AdFriend is an innovative Chrome extension that reimagines the web browsing experience by replacing intrusive advertisements with personalized movie recommendations. Instead of being distracted by ads, users discover their next favorite movie while browsing their favorite websites. The extension intelligently detects ad containers across the web and seamlessly replaces them with interactive movie cards featuring trailers, reviews, ratings, and watchlist management. Built with React and integrated with TMDb API, AdFriend provides a privacy-focused, user-friendly alternative to traditional advertising.",
     challenges: [
