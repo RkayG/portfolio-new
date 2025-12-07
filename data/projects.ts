@@ -7,7 +7,7 @@ export const allProjects: Project[] = [
     description:
       "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
     imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpau77knzT06L2Xl0r0QhEw6zEUmh41R3nzDJbEyOdvlzvmHgY4uxBAJMRHtCr-bQnAZx89Rf_yg8C6I-HRgrvsdZ1HdXLmk7VUo_ES4M_bnWUfTsaIcILfytwxTwRfHHoqGvrbco4BJhxqMHwAk1aEifp5vJ5k1EgS_d3TkyqkIjN2uAAFBLJGjwT_qrOwVv9MR1l-dqFZMHpfiXHQuS-e7XazQRajAzFMbiFOd-Wel6Dw6jp2eOOLWGtTDfETtrCPEp66Sz0bYg",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108924/Gemini_Generated_Image_r66ad3r66ad3r66a_hir2su.png",
     imageAlt: "Secure API Handler architecture diagram showing security layers",
     technologies: [
       "TypeScript",
@@ -25,10 +25,8 @@ export const allProjects: Project[] = [
     githubUrl: "https://github.com/RkayG/secure-api-request-handler",
     slug: "secure-api-handler",
     galleryImages: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpau77knzT06L2Xl0r0QhEw6zEUmh41R3nzDJbEyOdvlzvmHgY4uxBAJMRHtCr-bQnAZx89Rf_yg8C6I-HRgrvsdZ1HdXLmk7VUo_ES4M_bnWUfTsaIcILfytwxTwRfHHoqGvrbco4BJhxqMHwAk1aEifp5vJ5k1EgS_d3TkyqkIjN2uAAFBLJGjwT_qrOwVv9MR1l-dqFZMHpfiXHQuS-e7XazQRajAzFMbiFOd-Wel6Dw6jp2eOOLWGtTDfETtrCPEp66Sz0bYg",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGWzrzVyOaV-6GhREOmfJqRhlez0d2cjEMVMIBe2wXMWt_WyOjSy3jdsdzFxcmP5OVZ4jacODopsr5B_MnfGkaIaCK2BkMKyH2oJ-rH4C3zd8G_tyzk1cuKgmsaJfFu_4G_K6UKsyyW2KWLIPnC_zSQJ2F0QTpKgzPFUf_-zrFVqCqOgCW7Wqh0fzhfZOXCKGvfRrnSYkwYC9lmkMZB-t_VoMSVMX-Sh2Z49jsk3XsszmGnnLswMLojSgVuFvFN3FJRD-xTSe346g",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGYg8KRBfhnWex9PfaBYROuTTOHLZNTzi-CpYn-8_96YU5KNJQJ0ciiI7szujMheNX1vJctp2-WLDzE1ez0U4o29XybdWmyUUPWPwyifuV6iZxsEH4ztdqZ81_8M8jASx0sCyiuwKWF8jzqvHeTwt9d59eNeAfpWkO3QB02LKYjvjlJi-t_0n48YQh8gPVOK2sUYsgi5H-NlBkD_vA8d9foh3aBR54MJfCX7yhc1pDq-HwgYt99u2Ou6-qEp5_ryIKzcOTKgTVT6Q",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA1AzDnf2e_P4-1vBEq_fZ5oRDEFGo6ntVvKCGP4zlV3u9wcmtInz0n2XFSmFmj7bXcjw0FYXoOldi_bL2hYRxNbQomaMWz2qLIZ-uEAXvRXrJFxf10Cj0a-ChhPrYqTEl9dOrWnYASRFtNuZS8Z9kQkOULHzWL0YIi5AzHfULt8HbRvahc7HKwoCeYvxLrCdsaQ22i7ilrwNe3WtCf4y4FKS2EiWrFuoZhHwXgdBNYoV0kWbhgJ-d2Sf0GBUEnwLd0LHVzqfa1bLY",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
     ],
     overview:
       "A comprehensive, production-ready API handler framework designed to accelerate secure backend development. This enterprise-grade template provides a robust foundation for building scalable, multi-tenant applications with built-in security best practices, performance optimizations, and observability features. The framework abstracts away common concerns like authentication, input validation, rate limiting, caching, and monitoring, allowing developers to focus on business logic while maintaining industry-standard security and performance.",
@@ -78,6 +76,47 @@ export const allProjects: Project[] = [
   },
   {
     id: "2",
+    title: "OnRoute",
+    description:
+      "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+    imageAlt: "OnRoute taxi dispatch system showing mobile app and admin dashboard",
+    technologies: [
+      "React Native",
+      "Vite",
+      "Node.js",
+      "WebSocket",
+      "PostgreSQL",
+      "Cloudinary",
+      "Mapbox",
+      "Express",
+    ],
+    category: "Mobile App",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+    slug: "onroute",
+    galleryImages: [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGWzrzVyOaV-6GhREOmfJqRhlez0d2cjEMVMIBe2wXMWt_WyOjSy3jdsdzFxcmP5OVZ4jacODopsr5B_MnfGkaIaCK2BkMKyH2oJ-rH4C3zd8G_tyzk1cuKgmsaJfFu_4G_K6UKsyyW2KWLIPnC_zSQJ2F0QTpKgzPFUf_-zrFVqCqOgCW7Wqh0fzhfZOXCKGvfRrnSYkwYC9lmkMZB-t_VoMSVMX-Sh2Z49jsk3XsszmGnnLswMLojSgVuFvFN3FJRD-xTSe346g",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGYg8KRBfhnWex9PfaBYROuTTOHLZNTzi-CpYn-8_96YU5KNJQJ0ciiI7szujMheNX1vJctp2-WLDzE1ez0U4o29XybdWmyUUPWPwyifuV6iZxsEH4ztdqZ81_8M8jASx0sCyiuwKWF8jzqvHeTwt9d59eNeAfpWkO3QB02LKYjvjlJi-t_0n48YQh8gPVOK2sUYsgi5H-NlBkD_vA8d9foh3aBR54MJfCX7yhc1pDq-HwgYt99u2Ou6-qEp5_ryIKzcOTKgTVT6Q",
+    ],
+    overview:
+      "OnRoute is a comprehensive taxi dispatch and delivery system designed for real-time job allocation and driver compliance across the UK. The platform consists of a mobile React Native app for drivers and a powerful admin dashboard for oversight. The system streamlines the entire workflow from driver registration and document verification to real-time job bidding, GPS-based location validation, and comprehensive analytics. Built with scalability and security in mind, OnRoute handles high-volume operations while maintaining strict access controls and geo-restrictions.",
+    challenges: [
+      "Implementing real-time job allocation with WebSocket connections required building a robust pub/sub system that could handle thousands of concurrent driver connections while ensuring fair job distribution and preventing race conditions. The solution involved implementing priority queues, connection pooling, and efficient message broadcasting to all relevant drivers.",
+      "Building GPS-based location validation to ensure drivers are physically present at pickup points before job initiation. This required integrating Mapbox for accurate geocoding, implementing geofencing algorithms, and handling edge cases like GPS accuracy variations and network latency in real-time validation.",
+      "Creating a secure document upload and verification pipeline using Cloudinary while maintaining data privacy and compliance. The challenge was implementing proper file validation, virus scanning, secure storage, and automated document processing workflows that could scale with driver registrations.",
+      "Designing a comprehensive analytics system that could aggregate real-time metrics (average fare, delivery volume, job history) while maintaining query performance. This required implementing efficient database indexing, materialized views for complex aggregations, and caching strategies for frequently accessed dashboard data.",
+    ],
+    results:
+      "OnRoute successfully launched and processes thousands of jobs daily across the UK. The real-time dispatch system reduced average job allocation time by 40% compared to traditional methods. The GPS validation system achieved 98% accuracy in preventing fraudulent job starts, significantly improving service reliability. The admin dashboard provides comprehensive insights that enabled data-driven decision making, leading to a 25% increase in driver efficiency. The platform demonstrates expertise in real-time systems, mobile development, geolocation services, and enterprise-grade security implementation.",
+    role: "Full-Stack Developer & System Architect",
+    roleDescription:
+      "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
+  },
+  {
+    id: "3",
     title: "DeFi Trading Platform",
     description:
       "A decentralized finance platform for trading digital assets with real-time data.",
@@ -91,7 +130,7 @@ export const allProjects: Project[] = [
     slug: "defi-trading-platform",
   },
   {
-    id: "3",
+    id: "4",
     title: "NFT Marketplace",
     description:
       "A full-stack marketplace for creating, buying, and selling unique NFTs on the Ethereum blockchain.",
@@ -105,7 +144,7 @@ export const allProjects: Project[] = [
     slug: "nft-marketplace",
   },
   {
-    id: "4",
+    id: "5",
     title: "E-commerce Platform",
     description:
       "A modern, responsive e-commerce solution with a custom backend and payment integration.",
@@ -136,7 +175,7 @@ export const allProjects: Project[] = [
       "Responsible for backend architecture, database design, and frontend implementation.",
   },
   {
-    id: "5",
+    id: "6",
     title: "Task Management App",
     description:
       "A collaborative tool to help teams organize, track, and manage their work efficiently.",
@@ -150,7 +189,7 @@ export const allProjects: Project[] = [
     slug: "task-management-app",
   },
   {
-    id: "6",
+    id: "7",
     title: "Personal Blog Engine",
     description:
       "A lightweight and fast blog built with a static site generator and headless CMS.",
@@ -164,7 +203,7 @@ export const allProjects: Project[] = [
     slug: "personal-blog-engine",
   },
   {
-    id: "7",
+    id: "8",
     title: "Supply Chain dApp",
     description:
       "A blockchain application to track goods from origin to consumer with full transparency.",
