@@ -68,6 +68,18 @@ const skills = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuA8sRn1P74Wr8fzRbmILqxuPi3RqLy606BnvHRsHmm-nACjWGJW-4iPdrrRKC05RynPZdA3SUEYdNkvh8DMVw1VZt5FmY_Wm-M-aLhSuhO06GVdvG3ehMvep812ogq_cEuYqZ-oTtmB27uq2Mnc6T_jfZWQVTP0kVKZSj4pba-hJV4IT2kzb6H2w3NGca_wSS90joSpner68hxmexYegkjnEr-DVbFU1o3GBS9mv3WN_fb2QxkrcfmRJNM2ihtcoerez9cu4hAF_W8",
     iconAlt: "AWS logo",
   },
+  {
+    name: "Heroku",
+    iconUrl:
+      "https://cdn.simpleicons.org/heroku/430098",
+    iconAlt: "Heroku logo",
+  },
+  {
+    name: "Cloudinary",
+    iconUrl:
+      "https://res.cloudinary.com/cloudinary/image/upload/c_scale,w_200/v1/logo/for_white_bg/cloudinary_icon_blue.png",
+    iconAlt: "Cloudinary logo",
+  },
 ];
 
 const experiences = [

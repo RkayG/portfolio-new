@@ -3,6 +3,7 @@ import { Space_Grotesk, Kalam, Caveat, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { MobileBottomNav } from "@/components/MobileBottomNav";
+import { FloatingWizardButton } from "@/components/FloatingWizardButton";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -65,6 +66,7 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <MobileBottomNav />
+          <FloatingWizardButton />
         </ThemeProvider>
       </body>
     </html>
