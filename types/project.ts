@@ -11,6 +11,7 @@ export interface Project {
   slug: string;
   // Detailed fields for project detail page
   galleryImages?: string[];
+  videoUrl?: string;
   overview?: string;
   challenges?: string[];
   solutions?: string[];

@@ -113,8 +113,12 @@ export default async function ProjectDetailPage({
             </div>
 
             {/* Project Gallery */}
-            {galleryImages.length > 0 && (
-              <ProjectGallery images={galleryImages} imageAlt={project.imageAlt} />
+            {(galleryImages.length > 0 || project.videoUrl) && (
+              <ProjectGallery 
+                images={galleryImages} 
+                imageAlt={project.imageAlt}
+                videoUrl={project.videoUrl}
+              />
             )}
 
             {/* Project Details */}
