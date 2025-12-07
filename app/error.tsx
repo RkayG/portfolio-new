@@ -30,8 +30,7 @@ export default function Error({
 
             {/* BodyText */}
             <p className="text-text-light dark:text-text-dark text-base font-normal leading-normal pb-6 pt-2 px-4 max-w-lg">
-              An unexpected error occurred. We&apos;ve been notified and are looking into it. We
-              apologize for any inconvenience this may have caused.
+              An unexpected error occurred. Please refresh the page or <Link href="/contact" className="text-primary dark:text-secondary hover:text-primary/80 dark:hover:text-secondary/80 transition-colors">contact me</Link> if the problem persists.
             </p>
 
             {/* ButtonGroup */}
