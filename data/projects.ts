@@ -2,7 +2,7 @@ import { Project } from "@/types/project";
 
 export const allProjects: Project[] = [
   {
-    id: "12",
+    id: "0",
     title: "Cxperia",
     description:
       "A B2B2C SaaS digital experience platform enabling beauty and cosmetic brands to create immersive, interactive product experiences through QR codes, tutorials, and analytics.",
@@ -24,6 +24,17 @@ export const allProjects: Project[] = [
     slug: "cxperia",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683629/Screenshot_179_oai2zn.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683564/cxr2_talvfk.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683561/cxr4_ymdgmp.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683562/cxr3_zkqebv.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683560/cxr5_scv8dz.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683561/cxr7_bdfjcl.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683625/Screenshot_185_nhaqfl.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683621/Screenshot_187_lcksos.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683619/Screenshot_188_d83kly.png',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683617/Screenshot_193_bdgmki.png',
+    
     ],
     overview:
       "Cxperia is a comprehensive digital experience platform that enables beauty and cosmetic brands to create immersive, interactive product experiences. The platform allows brands to generate QR codes for their products, create step-by-step tutorials and routines, and collect valuable customer feedback and analytics. Built with a mobile-first approach, Cxperia provides brands with tools to enhance customer engagement, improve product education, and build stronger brand-customer relationships through digital experiences.",
@@ -32,7 +43,7 @@ export const allProjects: Project[] = [
       "Solely developed and launched the Cxperia platform, designing and implementing the entire platform architecture with a focus on modularity, extensibility, and scalable infrastructure.",
   },
   {
-    id: "2",
+    id: "1",
     title: "OnRoute",
     description:
       "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
@@ -84,49 +95,9 @@ export const allProjects: Project[] = [
     roleDescription:
       "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
   },
+  
   {
-    id: "1",
-    title: "SmartMention",
-    description:
-      "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
-    imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108924/Gemini_Generated_Image_r66ad3r66ad3r66a_hir2su.png",
-    imageAlt: "Secure API Handler architecture diagram showing security layers",
-    technologies: [
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "Prisma",
-      "Redis",
-      "Docker",
-      "PostgreSQL",
-      "JWT",
-      "Zod",
-    ],
-    category: "Web App",
-    liveDemoUrl: "",
-    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
-    slug: "secure-api-handler",
-    galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
-    ],
-    overview:
-      "A comprehensive, production-ready API handler framework designed to accelerate secure backend development. This enterprise-grade template provides a robust foundation for building scalable, multi-tenant applications with built-in security best practices, performance optimizations, and observability features. The framework abstracts away common concerns like authentication, input validation, rate limiting, caching, and monitoring, allowing developers to focus on business logic while maintaining industry-standard security and performance.",
-    challenges: [
-      "Designing a flexible authentication system that supports multiple strategies (JWT, API Keys, OAuth) while maintaining type safety and developer ergonomics. The solution required a strategy pattern implementation with a unified interface that could be easily extended without breaking existing code.",
-      "Implementing secure multi-tenant architecture with support for different isolation strategies (shared schema, separate schema, separate database) while ensuring data isolation and preventing tenant data leakage. This required careful design of context management and database query scoping.",
-      "Creating a performant caching layer that works across distributed systems using Redis, with intelligent cache invalidation strategies and fallback to in-memory caching. The challenge was balancing cache hit rates with data freshness and handling cache stampede scenarios.",
-      "Building comprehensive input sanitization and validation that prevents XSS, SQL injection, and CSRF attacks while maintaining developer productivity. This required integrating multiple security libraries (DOMPurify, Zod) and creating a unified sanitization pipeline.",
-    ],
-    results:
-      "The framework has been successfully used as a foundation for multiple production applications, significantly reducing development time while ensuring security and performance standards. It provides a complete solution for building secure APIs with features like distributed rate limiting, automatic request validation, multi-tenant support, and comprehensive monitoring. The template demonstrates expertise in enterprise-level architecture, security best practices, and developer experience optimization.",
-    role: "Full-Stack Developer & Framework Architect",
-    roleDescription:
-      "Designed and implemented the complete framework architecture, including security layers, multi-tenant support, caching strategies, and developer tooling.",
-  },
-  {
-    id: "1",
+    id: "2",
     title: "SmartMention",
     description:
       "A social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
@@ -175,57 +146,45 @@ export const allProjects: Project[] = [
       "Built the crawler engine and keyword monitoring system that tracks mentions, filters into topics, extracts leads, crises, trends, and anomalies. Implemented sentiment analysis and scheduler systems. Assisted the team in building the frontend analytics dashboard.",
   },
   {
-    id: "0",
-    title: "Secure API Handler Template",
+    id: "3",
+    title: "Secure API Handler",
     description:
-      "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
+      "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
     imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
-    imageAlt: "OnRoute taxi dispatch system showing mobile app and admin dashboard",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108924/Gemini_Generated_Image_r66ad3r66ad3r66a_hir2su.png",
+    imageAlt: "Secure API Handler architecture diagram showing security layers",
     technologies: [
-      "React Native",
-      "Vite",
+      "TypeScript",
       "Node.js",
-      "WebSocket",
-      "PostgreSQL",
-      "Cloudinary",
-      "Mapbox",
       "Express",
+      "Prisma",
+      "Redis",
+      "Docker",
+      "PostgreSQL",
+      "JWT",
+      "Zod",
     ],
-    category: "Mobile App",
+    category: "Web App",
     liveDemoUrl: "",
-    githubUrl: "",
-    slug: "onroute",
+    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
+    slug: "secure-api-handler",
     galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955865/Screenshot_23_ap4u4u.png",
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955865/Screenshot_21_ujtifh.png",
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_b8367cfe_mhqsqp.jpg",
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_884845ff_gp0p9b.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_bdf59ddb_dccmbl.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.52_540a4fc5_zim8lz.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.42.17_55931e93_bmgqwo.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.18_56861322_a8m9i7.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_83fab0aa_zd0ukk.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_1eda7273_sxwjzz.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.18_7fe6fcc1_szd754.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_7585e39d_nqfhbc.jpg',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.39.52_43863e2f_nayz38.jpg',
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
     ],
-    videoUrl: "",
     overview:
-      "OnRoute is a comprehensive taxi dispatch and delivery system designed for real-time job allocation and driver compliance across the UK. The platform consists of a mobile React Native app for drivers and a powerful admin dashboard for oversight. The system streamlines the entire workflow from driver registration and document verification to real-time job bidding, GPS-based location validation, and comprehensive analytics. Built with scalability and security in mind, OnRoute handles high-volume operations while maintaining strict access controls and geo-restrictions.",
+      "A comprehensive, production-ready API handler framework designed to accelerate secure backend development. This enterprise-grade template provides a robust foundation for building scalable, multi-tenant applications with built-in security best practices, performance optimizations, and observability features. The framework abstracts away common concerns like authentication, input validation, rate limiting, caching, and monitoring, allowing developers to focus on business logic while maintaining industry-standard security and performance.",
     challenges: [
-      "Implementing real-time job allocation with WebSocket connections required building a robust pub/sub system that could handle thousands of concurrent driver connections while ensuring fair job distribution and preventing race conditions. The solution involved implementing priority queues, connection pooling, and efficient message broadcasting to all relevant drivers.",
-      "Building GPS-based location validation to ensure drivers are physically present at pickup points before job initiation. This required integrating Mapbox for accurate geocoding, implementing geofencing algorithms, and handling edge cases like GPS accuracy variations and network latency in real-time validation.",
-      "Creating a secure document upload and verification pipeline using Cloudinary while maintaining data privacy and compliance. The challenge was implementing proper file validation, virus scanning, secure storage, and automated document processing workflows that could scale with driver registrations.",
-      "Designing a comprehensive analytics system that could aggregate real-time metrics (average fare, delivery volume, job history) while maintaining query performance. This required implementing efficient database indexing, materialized views for complex aggregations, and caching strategies for frequently accessed dashboard data.",
+      "Designing a flexible authentication system that supports multiple strategies (JWT, API Keys, OAuth) while maintaining type safety and developer ergonomics. The solution required a strategy pattern implementation with a unified interface that could be easily extended without breaking existing code.",
+      "Implementing secure multi-tenant architecture with support for different isolation strategies (shared schema, separate schema, separate database) while ensuring data isolation and preventing tenant data leakage. This required careful design of context management and database query scoping.",
+      "Creating a performant caching layer that works across distributed systems using Redis, with intelligent cache invalidation strategies and fallback to in-memory caching. The challenge was balancing cache hit rates with data freshness and handling cache stampede scenarios.",
+      "Building comprehensive input sanitization and validation that prevents XSS, SQL injection, and CSRF attacks while maintaining developer productivity. This required integrating multiple security libraries (DOMPurify, Zod) and creating a unified sanitization pipeline.",
     ],
     results:
-      "OnRoute successfully launched and processes thousands of jobs daily across the UK. The real-time dispatch system reduced average job allocation time by 40% compared to traditional methods. The GPS validation system achieved 98% accuracy in preventing fraudulent job starts, significantly improving service reliability. The admin dashboard provides comprehensive insights that enabled data-driven decision making, leading to a 25% increase in driver efficiency. The platform demonstrates expertise in real-time systems, mobile development, geolocation services, and enterprise-grade security implementation.",
-    role: "Full-Stack Developer & System Architect",
+      "The framework has been successfully used as a foundation for multiple production applications, significantly reducing development time while ensuring security and performance standards. It provides a complete solution for building secure APIs with features like distributed rate limiting, automatic request validation, multi-tenant support, and comprehensive monitoring. The template demonstrates expertise in enterprise-level architecture, security best practices, and developer experience optimization.",
+    role: "Full-Stack Developer & Framework Architect",
     roleDescription:
-      "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
+      "Designed and implemented the complete framework architecture, including security layers, multi-tenant support, caching strategies, and developer tooling.",
   },
   {
     id: "4",
@@ -257,7 +216,7 @@ export const allProjects: Project[] = [
       "Designed and developed the complete portfolio website including UI/UX design, project showcase system, co-founder wizard, and all interactive features.",
   },
   {
-    id: "3",
+    id: "5",
     title: "Solana Liquidation Bot",
     description:
       "A production-ready Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
@@ -290,7 +249,7 @@ export const allProjects: Project[] = [
   },
 
   {
-    id: "10",
+    id: "6",
     title: "AdFriend Extension",
     description:
       "A Chrome extension that transforms intrusive web advertisements into personalized movie recommendations, helping users discover their next favorite film while browsing.",
@@ -334,7 +293,7 @@ export const allProjects: Project[] = [
       "Designed and developed the complete Chrome extension including ad detection algorithms, TMDb API integration, interactive movie cards, popup interface, and watchlist management system with Chrome Storage Sync.",
   },
   {
-    id: "11",
+    id: "7",
     title: "OH Health + Pharmacy Website",
     description:
       "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.",

@@ -6,6 +6,7 @@ import { FilterChips } from "@/components/FilterChips";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 import Link from "next/link";
 import { allProjects } from "@/data/projects";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 const categories = ["All", "Web App", "Blockchain", "Mobile App"];
 
@@ -58,12 +59,7 @@ export default function ProjectsPage() {
                   </p>
                 </div>
                 <div className="flex justify-center">
-                  <Link
-                    href="/contact"
-                    className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors"
-                  >
-                    <span className="truncate">Contact Me</span>
-                  </Link>
+                  <AnimatedButton href="/contact">Contact Me</AnimatedButton>
                 </div>
               </div>
             </div>
