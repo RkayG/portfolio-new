@@ -11,6 +11,8 @@ interface AnimatedButtonProps {
   className?: string;
   variant?: "default" | "ghost";
   direction?: "left" | "right";
+  target?: string;
+  rel?: string;
 }
 
 export function AnimatedButton({
@@ -21,6 +23,8 @@ export function AnimatedButton({
   className = "",
   variant = "default",
   direction = "right",
+  target,
+  rel,
 }: AnimatedButtonProps) {
   const variantClass = variant === "ghost" 
     ? "cta-button-ghost" 
@@ -94,6 +98,14 @@ export function AnimatedButton({
   );
 
   if (href) {
+    // Use anchor tag for external links, Link for internal
+    if (target || rel) {
+      return (
+        <a href={href} target={target} rel={rel} className={`${variantClass} ${directionClass} ${className}`}>
+          {buttonContent}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={`${variantClass} ${directionClass} ${className}`}>
         {buttonContent}
