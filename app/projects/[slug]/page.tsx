@@ -5,6 +5,7 @@ import { ProjectSidebar } from "@/components/ProjectSidebar";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allProjects } from "@/data/projects";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -87,27 +88,24 @@ export default async function ProjectDetailPage({
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                {project.liveDemoUrl && (
-                  <a
+                {project.liveDemoUrl && project.liveDemoUrl !== "#" && project.liveDemoUrl.trim() !== "" && (
+                  <AnimatedButton
                     href={project.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-[#8D6E63] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#8D6E63]/90 transition-colors"
                   >
-                    <span className="material-symbols-outlined">open_in_new</span>
-                    <span className="truncate">Live Demo</span>
-                  </a>
+                    Live Demo
+                  </AnimatedButton>
                 )}
-                {project.githubUrl && (
-                  <a
+                {project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "" && (
+                  <AnimatedButton
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-gray-200 dark:bg-[#2C231A] text-[#333333] dark:text-[#E0E0E0] text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-[#2C231A]/80 transition-colors"
+                    variant="ghost"
                   >
-                    <span className="material-symbols-outlined">code</span>
-                    <span className="truncate">View on GitHub</span>
-                  </a>
+                    View on GitHub
+                  </AnimatedButton>
                 )}
               </div>
             </div>

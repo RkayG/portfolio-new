@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatedButton } from "./AnimatedButton";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -81,12 +82,11 @@ export function ContactForm() {
           required
         />
       </div>
-      <button
-        className="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
-        type="submit"
-      >
-        <span className="truncate">Send Message</span>
-      </button>
+      <div className="flex justify-center w-fit mx-auto">
+      <AnimatedButton type="submit">
+        Send Message
+      </AnimatedButton>
+      </div>
     </form>
   );
 }
