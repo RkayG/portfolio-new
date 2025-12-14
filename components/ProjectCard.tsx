@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnimatedButton } from "./AnimatedButton";
 
 interface ProjectCardProps {
   title: string;
@@ -67,7 +68,7 @@ export function ProjectCard({
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-4 mt-auto pt-2">
+      <div className="flex items-center gap-4 mt-auto pt-2 flex-wrap">
         {liveDemoUrl && liveDemoUrl !== "#" && liveDemoUrl.trim() !== "" && (
           <Link
             className="flex items-center gap-2 text-[#333333] dark:text-white hover:text-primary transition-colors text-sm font-semibold"
@@ -79,7 +80,7 @@ export function ProjectCard({
             Live Demo
           </Link>
         )}
-        {githubUrl && (
+        {githubUrl && githubUrl !== "#" && githubUrl.trim() !== "" && (
           <Link
             className="flex items-center gap-2 text-[#333333] dark:text-white hover:text-primary transition-colors text-sm font-semibold"
             href={githubUrl}
@@ -89,6 +90,9 @@ export function ProjectCard({
             <span className="material-symbols-outlined text-base">code</span>
             GitHub
           </Link>
+        )}
+        {slug && (
+          <AnimatedButton href={`/projects/${slug}`}>More</AnimatedButton>
         )}
       </div>
     </div>

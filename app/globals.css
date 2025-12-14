@@ -352,3 +352,74 @@
     fill: white;
   }
 }
+
+/* Secondary Button Styles */
+.secondary-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  --primary-color: #333333;
+  --hovered-color: #6b4a49;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dark .secondary-button {
+  --primary-color: #E0E0E0;
+  --hovered-color: #cf6417;
+}
+
+.secondary-button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.secondary-button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.secondary-button p::before {
+  position: absolute;
+  content: attr(data-text);
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.secondary-button:hover::after {
+  width: 100%;
+}
+
+.secondary-button:hover p::before {
+  width: 100%;
+}
+
+.secondary-button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.secondary-button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}

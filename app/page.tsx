@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ContactLink } from "@/components/ContactLink";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 export default function Home() {
   return (
@@ -18,25 +19,9 @@ export default function Home() {
                 Welcome to my portfolio
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
-                <Link
-                  href="/about"
-                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 text-[#6b4a49] dark:text-[#cf6417] underline text-base font-bold hover:opacity-90 transition-opacity"
-                >
-                  View About Me
-                </Link>
-                <Link
-                  href="/skills"
-                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 text-[#6b4a49] dark:text-[#cf6417] underline text-base font-bold hover:opacity-90 transition-opacity"
-                >
-                  View Skills
-                </Link>
-                <Link
-                  href="/projects"
-                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 text-[#6b4a49] dark:text-[#cf6417] underline text-base font-bold hover:opacity-90 transition-opacity"
-                >
-                  View Projects
-                </Link>
-                
+                <AnimatedButton href="/about">View About Me</AnimatedButton>
+                <AnimatedButton href="/skills">View Skills</AnimatedButton>
+                <AnimatedButton href="/projects">View Projects</AnimatedButton>
               </div>
              
             </div>
@@ -75,13 +60,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="text-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
-                >
-                  Send a Message
-                </Link>
+              <div className="text-center w-fit mx-auto">
+                <AnimatedButton href="/contact">Send a Message</AnimatedButton>
               </div>
             </section>
           </main>
