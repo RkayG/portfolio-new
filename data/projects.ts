@@ -2,8 +2,91 @@ import { Project } from "@/types/project";
 
 export const allProjects: Project[] = [
   {
-    id: "0",
-    title: "Secure API Handler Template",
+    id: "12",
+    title: "Cxperia",
+    description:
+      "A B2B2C SaaS digital experience platform enabling beauty and cosmetic brands to create immersive, interactive product experiences through QR codes, tutorials, and analytics.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
+    imageAlt: "Cxperia digital experience platform dashboard",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "React",
+      "Zustand",
+    ],
+    category: "Web App",
+    liveDemoUrl: "",
+    githubUrl: "",
+    slug: "cxperia",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
+    ],
+    overview:
+      "Cxperia is a comprehensive digital experience platform that enables beauty and cosmetic brands to create immersive, interactive product experiences. The platform allows brands to generate QR codes for their products, create step-by-step tutorials and routines, and collect valuable customer feedback and analytics. Built with a mobile-first approach, Cxperia provides brands with tools to enhance customer engagement, improve product education, and build stronger brand-customer relationships through digital experiences.",
+    role: "Founding Lead Developer",
+    roleDescription:
+      "Solely developed and launched the Cxperia platform, designing and implementing the entire platform architecture with a focus on modularity, extensibility, and scalable infrastructure.",
+  },
+  {
+    id: "2",
+    title: "OnRoute",
+    description:
+      "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+    imageAlt: "OnRoute taxi dispatch system showing mobile app and admin dashboard",
+    technologies: [
+      "React Native",
+      "Vite",
+      "Node.js",
+      "WebSocket",
+      "PostgreSQL",
+      "Cloudinary",
+      "Mapbox",
+      "Express",
+    ],
+    category: "Mobile App",
+    liveDemoUrl: "",
+    githubUrl: "",
+    slug: "onroute",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955865/Screenshot_23_ap4u4u.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955865/Screenshot_21_ujtifh.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_b8367cfe_mhqsqp.jpg",
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_884845ff_gp0p9b.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.51_bdf59ddb_dccmbl.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.39.52_540a4fc5_zim8lz.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653578/WhatsApp_Image_2025-12-11_at_14.42.17_55931e93_bmgqwo.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.18_56861322_a8m9i7.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_83fab0aa_zd0ukk.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_1eda7273_sxwjzz.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.18_7fe6fcc1_szd754.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.42.19_7585e39d_nqfhbc.jpg',
+      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765653577/WhatsApp_Image_2025-12-11_at_14.39.52_43863e2f_nayz38.jpg',
+    ],
+    videoUrl: "",
+    overview:
+      "OnRoute is a comprehensive taxi dispatch and delivery system designed for real-time job allocation and driver compliance across the UK. The platform consists of a mobile React Native app for drivers and a powerful admin dashboard for oversight. The system streamlines the entire workflow from driver registration and document verification to real-time job bidding, GPS-based location validation, and comprehensive analytics. Built with scalability and security in mind, OnRoute handles high-volume operations while maintaining strict access controls and geo-restrictions.",
+    challenges: [
+      "Implementing real-time job allocation with WebSocket connections required building a robust pub/sub system that could handle thousands of concurrent driver connections while ensuring fair job distribution and preventing race conditions. The solution involved implementing priority queues, connection pooling, and efficient message broadcasting to all relevant drivers.",
+      "Building GPS-based location validation to ensure drivers are physically present at pickup points before job initiation. This required integrating Mapbox for accurate geocoding, implementing geofencing algorithms, and handling edge cases like GPS accuracy variations and network latency in real-time validation.",
+      "Creating a secure document upload and verification pipeline using Cloudinary while maintaining data privacy and compliance. The challenge was implementing proper file validation, virus scanning, secure storage, and automated document processing workflows that could scale with driver registrations.",
+      "Designing a comprehensive analytics system that could aggregate real-time metrics (average fare, delivery volume, job history) while maintaining query performance. This required implementing efficient database indexing, materialized views for complex aggregations, and caching strategies for frequently accessed dashboard data.",
+    ],
+    results:
+      "OnRoute successfully launched and processes thousands of jobs daily across the UK. The real-time dispatch system reduced average job allocation time by 40% compared to traditional methods. The GPS validation system achieved 98% accuracy in preventing fraudulent job starts, significantly improving service reliability. The admin dashboard provides comprehensive insights that enabled data-driven decision making, leading to a 25% increase in driver efficiency. The platform demonstrates expertise in real-time systems, mobile development, geolocation services, and enterprise-grade security implementation.",
+    role: "Full-Stack Developer & System Architect",
+    roleDescription:
+      "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
+  },
+  {
+    id: "1",
+    title: "SmartMention",
     description:
       "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
     imageUrl:
@@ -21,7 +104,7 @@ export const allProjects: Project[] = [
       "Zod",
     ],
     category: "Web App",
-    liveDemoUrl: "https://github.com/RkayG/secure-api-request-handler",
+    liveDemoUrl: "",
     githubUrl: "https://github.com/RkayG/secure-api-request-handler",
     slug: "secure-api-handler",
     galleryImages: [
@@ -46,7 +129,7 @@ export const allProjects: Project[] = [
     id: "1",
     title: "SmartMention",
     description:
-      "An advanced social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
+      "A social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
     imageUrl:
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126610/Screenshot_26_bzyjmb.png",
     imageAlt: "SmartMention social listening dashboard showing analytics and signal tracking",
@@ -92,8 +175,8 @@ export const allProjects: Project[] = [
       "Built the crawler engine and keyword monitoring system that tracks mentions, filters into topics, extracts leads, crises, trends, and anomalies. Implemented sentiment analysis and scheduler systems. Assisted the team in building the frontend analytics dashboard.",
   },
   {
-    id: "2",
-    title: "OnRoute",
+    id: "0",
+    title: "Secure API Handler Template",
     description:
       "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
     imageUrl:
@@ -110,8 +193,8 @@ export const allProjects: Project[] = [
       "Express",
     ],
     category: "Mobile App",
-    liveDemoUrl: "https://onroute-admin.vercel.app",
-    githubUrl: "https://github.com/RkayG/onroute",
+    liveDemoUrl: "",
+    githubUrl: "",
     slug: "onroute",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
