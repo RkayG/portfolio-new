@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="mt-auto border-t border-solid border-[#4A2E2A]/20 dark:border-[#473324] text-center py-6">
       <div className="mx-auto flex max-w-[960px] flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-8 lg:px-0">
         <p className="text-sm text-[#333333]/70 dark:text-[#c8a993]/80">
-          © 2024 Rufus Gladness. All rights reserved.
+          © 2025 Rufus Gladness. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
           <a

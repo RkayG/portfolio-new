@@ -269,16 +269,11 @@
   text-decoration: none;
   font-size: 14px;
   color: white;
-  background: #6b4a49;
   transition: 1s;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
   transform: skewX(-15deg);
   border: none;
   cursor: pointer;
-}
-
-.dark .cta-button {
-  background: #cf6417;
 }
 
 .cta-button:focus {
@@ -290,8 +285,67 @@
   box-shadow: 6px 6px 0 #8D7B68;
 }
 
-.dark .cta-button:hover {
-  box-shadow: 6px 6px 0 #c8a993;
+html.dark .cta-button:hover {
+  box-shadow: 6px 6px 0 #c8a993 !important;
+}
+
+/* Ghost Variant Styles */
+.cta-button-ghost {
+  display: flex;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #6b4a49;
+  background-color: transparent;
+  transition: 1s;
+  box-shadow: 4px 4px 0 rgba(107, 74, 73, 0.2);
+  transform: skewX(-15deg);
+  border: 2px solid #6b4a49;
+  cursor: pointer;
+}
+
+html.dark .cta-button-ghost {
+  color: #cf6417;
+  border-color: #cf6417;
+  box-shadow: 4px 4px 0 rgba(207, 100, 23, 0.2);
+}
+
+.cta-button-ghost:hover {
+  transition: 0.5s;
+  box-shadow: 6px 6px 0 #8D7B68;
+  background-color: rgba(107, 74, 73, 0.1);
+}
+
+html.dark .cta-button-ghost:hover {
+  box-shadow: 6px 6px 0 #c8a993 !important;
+  background-color: rgba(207, 100, 23, 0.1);
+}
+
+.cta-button-ghost .cta-arrow path {
+  fill: #6b4a49;
+}
+
+html.dark .cta-button-ghost .cta-arrow path {
+  fill: #cf6417;
+}
+
+/* Left direction styles */
+.cta-button-left .cta-span {
+  transform: skewX(15deg);
+}
+
+.cta-button-left .cta-second-left {
+  width: 16px;
+  margin-right: 20px;
+  margin-left: 0;
+  position: relative;
+  top: 12%;
+}
+
+.cta-button-left:hover .cta-second-left {
+  transition: 0.5s;
+  margin-right: 30px;
+  margin-left: 0;
 }
 
 .cta-button .cta-second {

@@ -141,7 +141,7 @@ export default function AboutPage() {
               My career has been defined by turning ideas into scalable products. As a founder, co-founder and technical lead, I've launched multiple SaaS platforms, navigating everything from initial concept validation to architecture decisions, team building, and go-to-market strategy.
               </p>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-              I believe great engineering serves the business. That means writing clean, maintainable code while keeping a sharp eye on user needs, product-market fit, and sustainable growth. Whether building a customer loyalty platform, a peer-to-peer marketplace, or a custom POS system, I focus on creating technical foundations that enable business possibilities.
+              I believe great software isn't just about code - it's about understanding users, proving concepts quickly, and building systems that adapt. That means writing clean, maintainable code while keeping a sharp eye on user needs, product-market fit, and sustainable growth. Whether building a customer loyalty platform, a peer-to-peer marketplace, or a custom POS system, I focus on creating technical foundations that enable business possibilities.
               </p>
                 <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
                 Today, I combine my entrepreneurial experience with deep technical expertise to create products that are not just functional, but strategically valuable and technically excellent.
