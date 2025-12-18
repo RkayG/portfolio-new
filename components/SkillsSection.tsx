@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { AnimatedButton } from "@/components/AnimatedButton";
 interface Skill {
   name: string;
   iconUrl: string;
@@ -37,17 +37,7 @@ const getSimpleIconSlug = (techName: string): string | null => {
 export function SkillsSection({ skills }: SkillsSectionProps) {
   return (
     <section className="mt-16">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
-          Skills & Technologies
-        </h2>
-        <Link
-          href="/skills"
-          className="text-sm font-semibold text-[#8D6E63] dark:text-[#cf6417] hover:underline"
-        >
-          See All
-        </Link>
-      </div>
+    
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {skills.map((skill) => {
           const isImageUrl = skill.iconUrl.startsWith("http://") || skill.iconUrl.startsWith("https://");
@@ -74,6 +64,10 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
             </div>
           );
         })}
+      </div>
+
+      <div className="flex items-center justify-center my-6">
+        <AnimatedButton href="/skills">See All</AnimatedButton>
       </div>
     </section>
   );

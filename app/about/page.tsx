@@ -130,36 +130,71 @@ export default function AboutPage() {
           <main className="flex-1 py-10 md:py-16">
             <ProfileHeader
               name="Rufus"
-              title="Software & Blockchain Engineer"
-              description="A passionate full-stack engineer with a focus on building software and blockchain solutions that are secure, scalable, and user-friendly. I enjoy solving problems that require creative solutions."
+              title="Founder-Engineer | Architecting Scalable Systems from Zero to One"
+              description="I transform ambitious ideas into production-ready platforms. Equal parts technical architect and product strategist, I build systems that don't just work—they create business value and withstand scale."
             />
             <section className="mt-16">
               <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
-                My Path as a Builder
+                From First Principles to First Customers
               </h2>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-              My career has been defined by turning ideas into scalable products. As a founder, co-founder and technical lead, I've launched multiple SaaS platforms, navigating everything from initial concept validation to architecture decisions, team building, and go-to-market strategy.
+                I don't just write code—I architect companies. My journey sits at the intersection of 
+                <span className="font-semibold text-[#6b4a49] dark:text-[#d4a574]"> technical depth</span> and 
+                <span className="font-semibold text-[#6b4a49] dark:text-[#d4a574]"> entrepreneurial execution</span>. 
+                I've launched multiple ventures from fun projects to revenue-generating platforms, 
+                navigating the full stack of startup challenges: product-market fit, team building, 
+                technical scalability, and user acquisition.
               </p>
+              
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-              I believe great software isn't just about code - it's about understanding users, proving concepts quickly, and building systems that adapt. That means writing clean, maintainable code while keeping a sharp eye on user needs, product-market fit, and sustainable growth. Whether building a customer loyalty platform, a peer-to-peer marketplace, or a custom POS system, I focus on creating technical foundations that enable business possibilities.
+                What distinguishes my approach? <span className="font-semibold">Architectural foresight</span>. 
+                I build systems that anticipate scale from day one while remaining agile enough to pivot. 
+                Whether it's designing a secure P2P marketplace trust layer or architecting a B2B SaaS 
+                platform, I focus on creating <span className="italic">foundational infrastructure</span> 
+                that enables future possibilities, not just immediate features.
               </p>
-                <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                Today, I combine my entrepreneurial experience with deep technical expertise to create products that are not just functional, but strategically valuable and technically excellent.
+              
+              <div className="mt-6 p-6 border-l-4 border-[#6b4a49] dark:border-[#d4a574] bg-[#f9f5f1] dark:bg-[#1a1a1a]/50">
+                <p className="text-[#6b4a49] dark:text-[#d4a574] font-semibold italic">
+                  "The most elegant code solves problems users don't even know they have yet. 
+                  My job is to build the bridge between technical possibility and business necessity."
                 </p>
+              </div>
+              
+              <p className="mt-6 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
+                My technical philosophy is simple: <span className="font-semibold">complexity behind the scenes, 
+                simplicity in the experience</span>. I obsess over clean abstractions, type-safe systems, 
+                and security by design—because in production, elegance isn't a luxury, it's a requirement 
+                for maintainability and trust.
+              </p>
             </section>
-            <SkillsSection skills={skills} />
+            <section className="mt-16">
+              <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993] mb-2">
+                Strategic Toolbox
+              </h2>
+              <p className="text-base text-[#333333]/80 dark:text-[#c8a993] mb-6">
+                Technologies I leverage not as ends in themselves, but as strategic tools to solve 
+                specific business challenges—from blockchain trust mechanisms to real-time SaaS architectures.
+              </p>
+              <SkillsSection skills={skills} />
+            </section>
             <ExperienceSection experiences={experiences} />
             <ProjectsSection projects={featuredProjects} />
             <section className="mt-20 text-center">
               <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
-                Let&apos;s Build Something Great
+                Let&apos;s Architect Your Next Venture
               </h2>
               <p className="mt-3 mx-auto max-w-lg text-base text-[#333333]/80 dark:text-[#c8a993]">
-                Interested in collaborating or have a project in mind? I&apos;m
-                always open to new opportunities and challenges.
+                Whether you're a founder needing a technical co-founder, a startup scaling their platform, 
+                or a team tackling a complex technical challenge—let's build something that matters.
               </p>
-              <div className="mt-6 flex justify-center">
-                <AnimatedButton href="/projects">View My Work</AnimatedButton>
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <AnimatedButton href="/projects">
+                  Explore My Work
+                </AnimatedButton>
+                <AnimatedButton href="/contact" variant="ghost">
+                  Start a Conversation
+                </AnimatedButton>
               </div>
             </section>
           </main>
