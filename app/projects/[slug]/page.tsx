@@ -131,6 +131,124 @@ export default async function ProjectDetailPage({
                   </p>
                 </section>
 
+                {project.keyFeatures && project.keyFeatures.length > 0 && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                      Key Features
+                    </h2>
+                    <div className="space-y-6">
+                      {project.keyFeatures.map((feature, index) => (
+                        <div key={index} className="border-l-4 border-[#8D6E63] pl-4">
+                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-2">
+                            {feature.title}
+                          </h3>
+                          <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                            {feature.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {project.technicalHighlights && project.technicalHighlights.length > 0 && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                      Technical Highlights
+                    </h2>
+                    <ul className="space-y-3">
+                      {project.technicalHighlights.map((highlight, index) => (
+                        <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                          <span className="text-[#8D6E63] mr-2 mt-1">•</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {project.architecture && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                      Architecture
+                    </h2>
+                    <div className="space-y-6">
+                      {project.architecture.designPatterns && project.architecture.designPatterns.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                            Design Patterns
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {project.architecture.designPatterns.map((pattern, index) => (
+                              <span
+                                key={index}
+                                className="px-3 py-1 bg-[#8D6E63]/10 dark:bg-[#8D6E63]/20 text-[#5D4037] dark:text-[#8D6E63] rounded-md text-sm font-medium"
+                              >
+                                {pattern}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      {project.architecture.keyComponents && project.architecture.keyComponents.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                            Key Components
+                          </h3>
+                          <ul className="space-y-2">
+                            {project.architecture.keyComponents.map((component, index) => (
+                              <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                                <span className="text-[#8D6E63] mr-2 mt-1">→</span>
+                                <span>{component}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {project.architecture.scalabilityFeatures && project.architecture.scalabilityFeatures.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                            Scalability Features
+                          </h3>
+                          <ul className="space-y-2">
+                            {project.architecture.scalabilityFeatures.map((feature, index) => (
+                              <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                                <span className="text-[#8D6E63] mr-2 mt-1">⚡</span>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </section>
+                )}
+
+                {project.codeSamples && project.codeSamples.length > 0 && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                      Code Samples
+                    </h2>
+                    <div className="space-y-8">
+                      {project.codeSamples.map((sample, index) => (
+                        <div key={index} className="border border-[#8D6E63]/20 dark:border-[#8D6E63]/30 rounded-lg overflow-hidden">
+                          <div className="bg-[#8D6E63]/5 dark:bg-[#8D6E63]/10 px-4 py-3 border-b border-[#8D6E63]/20 dark:border-[#8D6E63]/30">
+                            <h3 className="text-lg font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-1">
+                              {sample.title}
+                            </h3>
+                            <p className="text-sm text-[#333333]/70 dark:text-[#E0E0E0]/70">
+                              {sample.description}
+                            </p>
+                          </div>
+                          <pre className="p-4 bg-[#1E1E1E] dark:bg-[#0D0D0D] text-[#D4D4D4] text-sm overflow-x-auto">
+                            <code>{sample.code}</code>
+                          </pre>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
                 {challenges && challenges.length > 0 && (
                   <section>
                     <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
@@ -154,9 +272,20 @@ export default async function ProjectDetailPage({
                     <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
                       Results & Impact
                     </h2>
-                    <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
-                      {results}
-                    </p>
+                    {Array.isArray(results) ? (
+                      <ul className="space-y-3">
+                        {results.map((result, index) => (
+                          <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                            <span className="text-[#8D6E63] mr-2 mt-1">✓</span>
+                            <span dangerouslySetInnerHTML={{ __html: result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                        {results}
+                      </p>
+                    )}
                   </section>
                 )}
               </div>

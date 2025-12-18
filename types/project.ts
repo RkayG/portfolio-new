@@ -5,7 +5,7 @@ export interface Project {
   imageUrl: string;
   imageAlt: string;
   technologies: string[];
-  category: "All" | "Web App" | "Blockchain" | "Mobile App";
+  category: "All" | "Web App" | "Blockchain" | "Mobile App" | "Backend Framework / Developer Tooling";
   liveDemoUrl?: string;
   githubUrl?: string;
   slug: string;
@@ -15,8 +15,24 @@ export interface Project {
   overview?: string;
   challenges?: string[];
   solutions?: string[];
-  results?: string;
+  results?: string | string[];
   role?: string;
   roleDescription?: string;
+  // Enhanced fields for detailed project pages
+  keyFeatures?: Array<{
+    title: string;
+    description: string;
+  }>;
+  technicalHighlights?: string[];
+  architecture?: {
+    designPatterns?: string[];
+    keyComponents?: string[];
+    scalabilityFeatures?: string[];
+  };
+  codeSamples?: Array<{
+    title: string;
+    description: string;
+    code: string;
+  }>;
 }
 

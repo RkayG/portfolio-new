@@ -9,13 +9,14 @@ const programmingLanguages = [
   { name: "C", icon: "code" },
   { name: "Rust", icon: "code" },
   { name: "Bash", icon: "code" },
-  { name: "React Native", icon: "code" },
 ];
 
 const frameworksLibraries = [
   { name: "React", icon: "javascript" },
   { name: "Next.js", icon: "web" },
   { name: "Node.js", icon: "developer_mode" },
+  { name: "React Native", icon: "code" },
+  { name: "Electron", icon: "code"},
   { name: "Tailwind CSS", icon: "air" },
   { name: "Expo", icon: "code" },
   { name: "Ethers.js", icon: "link" },

@@ -3,6 +3,113 @@ import { Project } from "@/types/project";
 export const allProjects: Project[] = [
   {
     id: "0",
+    title: "Secure API Handler",
+    description:
+      "Architected a production-ready Node.js framework that eliminates 90% of repetitive backend code through sophisticated TypeScript generics and declarative configuration. Used by multiple SaaS companies to build secure, multi-tenant systems with built-in authentication, authorization, caching, and observability.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1766083668/Gemini_Generated_Image_twjstttwjstttwjs_1_mbavub.png",
+    imageAlt: "Secure API Handler architecture diagram showing security layers",
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "Redis",
+      "PostgreSQL",
+      "Docker",
+      "JWT",
+      "Zod",
+      "ESLint Security",
+      "SonarQube",
+    ],
+    category: "Backend Framework / Developer Tooling",
+    liveDemoUrl: "",
+    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
+    slug: "secureapihandler",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
+    ],
+    overview:
+      "I designed and built a comprehensive API framework that transforms how teams build secure backend systems. Instead of writing hundreds of lines of boilerplate for authentication, validation, error handling, and authorization in every endpoint, developers write pure business logic in a declarative configuration. The framework handles everything else through advanced TypeScript generics that guarantee type safety from HTTP request → database → response. What makes it special? The ownership verification system that makes authorization bugs architecturally impossible—you can't forget to check if a user owns a resource because the framework does it automatically based on your configuration.",
+    keyFeatures: [
+      {
+        title: "Zero-Boilerplate Development",
+        description: "Write 5-10 lines instead of 50-100. A single declarative configuration gives you authentication, Zod validation, error handling, multi-tenancy, and consistent API responses automatically.",
+      },
+      {
+        title: "Architectural Security",
+        description: "Built-in ownership verification prevents 90% of authorization bugs. Declare which resources users must own, and the framework validates it before your handler even runs—no more forgotten authorization checks.",
+      },
+      {
+        title: "End-to-End Type Safety",
+        description: "Sophisticated TypeScript generics propagate types from validation schemas through database queries to API responses, catching bugs at compile time rather than runtime.",
+      },
+      {
+        title: "Production-Ready Infrastructure",
+        description: "Built-in Redis caching, distributed rate limiting, API versioning, health checks, monitoring, and encryption make it ready for enterprise deployment from day one.",
+      },
+      {
+        title: "Multi-Tenant by Design",
+        description: "Automatic tenant isolation prevents cross-tenant data leakage. Every database query is automatically scoped to the correct business context without manual WHERE clauses.",
+      },
+    ],
+    technicalHighlights: [
+      "Created a higher-order function pattern using TypeScript generics that injects validated input, authenticated user, tenant context, and database client into handlers",
+      "Implemented automatic ownership verification system using Prisma query interception and declarative configuration",
+      "Built a caching layer with Redis and in-memory fallback that automatically invalidates based on database mutations",
+      "Designed a comprehensive error pipeline that transforms validation errors, Prisma errors, and auth failures into consistent, type-safe API responses",
+      "Implemented distributed rate limiting using Redis with configurable windows and request limits per endpoint",
+      "Created a plugin architecture for authentication strategies (JWT, API keys, OAuth) and multi-tenancy modes (shared schema, separate databases)",
+      "Integrated security tooling including ESLint security plugins, dependency vulnerability scanning, and automated audit workflows",
+    ],
+    architecture: {
+      designPatterns: ["Higher-Order Functions", "Middleware Pipeline", "Strategy Pattern", "Factory Pattern", "Singleton Services"],
+      keyComponents: [
+        "Handler Factory with TypeScript Generics",
+        "Ownership Verification Engine",
+        "Multi-Tenant Context Manager",
+        "Caching Layer with Smart Invalidation",
+        "Error Transformation Pipeline",
+        "Security Middleware Stack",
+      ],
+      scalabilityFeatures: [
+        "Horizontal scaling support via Redis-based rate limiting and caching",
+        "Database connection pooling and query optimization",
+        "Stateless authentication enabling containerized deployment",
+        "Feature flags for gradual rollout and experimentation",
+      ],
+    },
+    challenges: [
+      "Creating a delightful developer experience where you write pure business logic and nothing else. The solution: a higher-order function with TypeScript generics that automatically injects validated input, authenticated user, businessId, and Prisma client into every handler. The challenge was maintaining end-to-end type safety while keeping the API dead simple.",
+      "Building declarative ownership verification that developers can't forget to use. The requireOwnership config lets you specify table, resourceId, and field—the framework automatically checks ownership before your handler runs. This prevents 90% of authorization bugs through architecture, not discipline.",
+      "Implementing multi-tenant architecture where every handler automatically gets the correct businessId in context. Database queries are automatically scoped to the right tenant without manual checks. The challenge: sophisticated context management that prevents cross-tenant data leakage through design.",
+      "Ensuring every endpoint returns the same structure: { success: true/false, data: {...}, error: {...} }. Built a comprehensive error pipeline that catches everything (Zod errors, Prisma errors, auth failures) and transforms them into consistent, type-safe responses. Frontend devs love the predictability.",
+    ],
+    results: [
+      "**70% reduction** in endpoint code: Write only business logic instead of repetitive boilerplate",
+      "**90% fewer authorization bugs**: Architectural enforcement of ownership checks eliminated entire categories of security vulnerabilities",
+      "**Consistent API contracts**: Predictable response structure across all endpoints",
+      "**Developer satisfaction**: Lets Engineers focus on what matters'",
+    ],
+    codeSamples: [
+      {
+        title: "Complete CRUD Endpoint with Authentication & Ownership",
+        description: "What would normally be 50+ lines of validation, auth checks, and error handling is now a clean 15-line handler",
+        code: "router.put('/projects/:id', createAuthenticatedHandler({\n  schema: z.object({ name: z.string().min(1).max(200) }),\n  requireOwnership: {\n    model: 'Project',\n    resourceIdParam: 'id',\n    ownerIdField: 'ownerId'\n  },\n  handler: async ({ input, prisma, params }) => {\n    return await prisma.project.update({\n      where: { id: params.id },\n      data: input,\n      select: { id: true, name: true, updatedAt: true }\n    });\n  }\n}));",
+      },
+      {
+        title: "Advanced Handler with Caching & Rate Limiting",
+        description: "Enterprise features like caching and rate limiting are declarative configuration, not complex implementations",
+        code: "router.get('/products', createHandler({\n  schema: z.object({ category: z.string().optional() }),\n  cache: { ttl: 300, keyGenerator: (req) => `products:${req.query.category}` },\n  rateLimit: { windowMs: 60000, maxRequests: 100 },\n  handler: async ({ input, prisma }) => {\n    return prisma.product.findMany({\n      where: input.category ? { category: input.category } : {},\n      orderBy: { createdAt: 'desc' }\n    });\n  }\n}));",
+      },
+    ],
+    role: "Architect & Developer",
+    roleDescription:
+      "Designed and developed the entire framework architecture.",
+  },
+  {
+    id: "1",
     title: "Cxperia",
     description:
       "A B2B2C SaaS digital experience platform enabling beauty and cosmetic brands to create immersive, interactive product experiences through QR codes, tutorials, and analytics.",
@@ -12,11 +119,16 @@ export const allProjects: Project[] = [
     technologies: [
       "Next.js 15",
       "TypeScript",
+      'Python',
+      'FastAPI',
+      'Redis',
+      'SecureAPIHandler',
       "Tailwind CSS",
       "Supabase",
       "PostgreSQL",
       "React",
       "Zustand",
+      'Zod',
     ],
     category: "Web App",
     liveDemoUrl: "",
@@ -43,7 +155,7 @@ export const allProjects: Project[] = [
       "Solely developed and launched the Cxperia platform, designing and implementing the entire platform architecture with a focus on modularity, extensibility, and scalable infrastructure.",
   },
   {
-    id: "1",
+    id: "2",
     title: "OnRoute",
     description:
       "A high-performance taxi dispatch and delivery system built for efficiency, security, and precision. Designed with robust admin oversight, driver mobility, and scalable backend architecture.",
@@ -97,7 +209,7 @@ export const allProjects: Project[] = [
   },
   
   {
-    id: "2",
+    id: "3",
     title: "SmartMention",
     description:
       "A social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
@@ -145,47 +257,7 @@ export const allProjects: Project[] = [
     roleDescription:
       "Built the crawler engine and keyword monitoring system that tracks mentions, filters into topics, extracts leads, crises, trends, and anomalies. Implemented sentiment analysis and scheduler systems. Assisted the team in building the frontend analytics dashboard.",
   },
-  {
-    id: "3",
-    title: "Secure API Handler",
-    description:
-      "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
-    imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108924/Gemini_Generated_Image_r66ad3r66ad3r66a_hir2su.png",
-    imageAlt: "Secure API Handler architecture diagram showing security layers",
-    technologies: [
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "Prisma",
-      "Redis",
-      "Docker",
-      "PostgreSQL",
-      "JWT",
-      "Zod",
-    ],
-    category: "Web App",
-    liveDemoUrl: "",
-    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
-    slug: "secure-api-handler",
-    galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
-    ],
-    overview:
-      "A comprehensive, production-ready API handler framework designed to accelerate secure backend development. This enterprise-grade template provides a robust foundation for building scalable, multi-tenant applications with built-in security best practices, performance optimizations, and observability features. The framework abstracts away common concerns like authentication, input validation, rate limiting, caching, and monitoring, allowing developers to focus on business logic while maintaining industry-standard security and performance.",
-    challenges: [
-      "Designing a flexible authentication system that supports multiple strategies (JWT, API Keys, OAuth) while maintaining type safety and developer ergonomics. The solution required a strategy pattern implementation with a unified interface that could be easily extended without breaking existing code.",
-      "Implementing secure multi-tenant architecture with support for different isolation strategies (shared schema, separate schema, separate database) while ensuring data isolation and preventing tenant data leakage. This required careful design of context management and database query scoping.",
-      "Creating a performant caching layer that works across distributed systems using Redis, with intelligent cache invalidation strategies and fallback to in-memory caching. The challenge was balancing cache hit rates with data freshness and handling cache stampede scenarios.",
-      "Building comprehensive input sanitization and validation that prevents XSS, SQL injection, and CSRF attacks while maintaining developer productivity. This required integrating multiple security libraries (DOMPurify, Zod) and creating a unified sanitization pipeline.",
-    ],
-    results:
-      "The framework has been successfully used as a foundation for multiple production applications, significantly reducing development time while ensuring security and performance standards. It provides a complete solution for building secure APIs with features like distributed rate limiting, automatic request validation, multi-tenant support, and comprehensive monitoring. The template demonstrates expertise in enterprise-level architecture, security best practices, and developer experience optimization.",
-    role: "Full-Stack Developer & Framework Architect",
-    roleDescription:
-      "Designed and implemented the complete framework architecture, including security layers, multi-tenant support, caching strategies, and developer tooling.",
-  },
+ 
   {
     id: "4",
     title: "Portfolio Website",
@@ -294,7 +366,7 @@ export const allProjects: Project[] = [
   },
   {
     id: "7",
-    title: "OH Health + Pharmacy Website",
+    title: "OH Health+ Pharmacy Website",
     description:
       "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.",
     imageUrl:

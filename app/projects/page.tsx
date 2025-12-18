@@ -8,7 +8,7 @@ import Link from "next/link";
 import { allProjects } from "@/data/projects";
 import { AnimatedButton } from "@/components/AnimatedButton";
 
-const categories = ["All", "Web App", "Blockchain", "Mobile App"];
+const categories = ["All", "Web App", "Blockchain", "Mobile App", "Backend Framework / Developer Tooling"];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
