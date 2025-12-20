@@ -5,7 +5,7 @@ export const allProjects: Project[] = [
     id: "0",
     title: "Secure API Handler",
     description:
-      "Architected a production-ready Node.js framework that eliminates 90% of repetitive backend code through sophisticated TypeScript generics and declarative configuration. Useful for building secure, multi-tenant systems with built-in authentication, authorization, caching, and observability.",
+      "A production-ready Node.js framework that eliminates 90% of repetitive backend code through sophisticated TypeScript generics and declarative configuration. Useful for building secure, multi-tenant systems with built-in authentication, authorization, caching, and observability.",
     imageUrl:
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1766083668/Gemini_Generated_Image_twjstttwjstttwjs_1_mbavub.png",
     imageAlt: "Secure API Handler architecture diagram showing security layers",

@@ -89,17 +89,24 @@ const skills = [
 const experiences = [
   {
     period: "2025 - Present",
-    title: "Founding CTO / Founding Lead Engineer",
+    title: "CTO / Lead Engineer",
     company: "J Vortex",
     description:
       "Led technical vision and architecture for a suite of software products, including Wigree, a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions. Built and mentored the core engineering team, establishing development processes, coding standards, and a culture of technical excellence. Architected scalable and secure systems from the ground up, making critical technology stack decisions to balance rapid development with long-term stability.",
   },
   {
     period: "2025 - Present",
-    title: "Founding Lead Developer",
+    title: "Lead Developer",
     company: "Cxperia",
     description:
       "Solely developed and launched the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
+  },
+  {
+    period: "2025 - Present",
+    title: "Co-Founder & Co-Developer",
+    company: "SmartMention",
+    description:
+      "Co-developed and launched the SmartMention platform - a social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
   },
   {
     period: "2024 - 2025",
