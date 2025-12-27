@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { SkillsCategory } from "@/components/SkillsCategory";
 
@@ -16,7 +17,7 @@ const frameworksLibraries = [
   { name: "Next.js", icon: "web" },
   { name: "Node.js", icon: "developer_mode" },
   { name: "React Native", icon: "code" },
-  { name: "Electron", icon: "code"},
+  { name: "Electron", icon: "code" },
   { name: "Tailwind CSS", icon: "air" },
   { name: "Expo", icon: "code" },
   { name: "Ethers.js", icon: "link" },
@@ -119,6 +120,14 @@ const securityAccessControl = [
 ];
 
 
+export const metadata: Metadata = {
+  title: "Skills & Technologies",
+  description: "A comprehensive overview of my technical expertise, including JavaScript, Python, Solidity, Next.js, Docker, and AWS.",
+  alternates: {
+    canonical: "/skills",
+  },
+};
+
 export default function SkillsPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
@@ -126,66 +135,66 @@ export default function SkillsPage() {
         <div className="mx-auto flex w-full max-w-[960px] flex-col px-4 sm:px-8 lg:px-0">
           <Header />
           <main className="flex-1 flex flex-col gap-10 py-10 md:py-16">
-              {/* PageHeading */}
-              <div className="flex flex-wrap justify-between gap-4 p-4">
-                <div className="flex flex-col gap-3">
-                  <p className="text-primary text-4xl md:text-5xl font-handwriting font-bold leading-tight tracking-[-0.033em]">
-                    Skills & Technologies
-                  </p>
-                  <p className="text-[#333333]/80 dark:text-[#c8a993] max-w-2xl text-base font-normal leading-normal">
-                    A comprehensive overview of my technical expertise, from
-                    programming languages and frameworks to blockchain and
-                    DevOps.
-                  </p>
-                </div>
+            {/* PageHeading */}
+            <div className="flex flex-wrap justify-between gap-4 p-4">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-primary text-4xl md:text-5xl font-handwriting font-bold leading-tight tracking-[-0.033em]">
+                  Skills & Technologies
+                </h1>
+                <p className="text-[#333333]/80 dark:text-[#c8a993] max-w-2xl text-base font-normal leading-normal">
+                  A comprehensive overview of my technical expertise, from
+                  programming languages and frameworks to blockchain and
+                  DevOps.
+                </p>
               </div>
-              {/* Skills Section */}
-              <div className="flex flex-col gap-8">
-                <SkillsCategory
-                  title="Programming Languages"
-                  skills={programmingLanguages}
-                />
-                <SkillsCategory
-                  title="Frameworks & Libraries"
-                  skills={frameworksLibraries}
-                />
-                <SkillsCategory
-                  title="Blockchain Development"
-                  skills={blockchainDevelopment}
-                />
-                <SkillsCategory
-                  title="Databases"
-                  skills={databases}
-                />
-                <SkillsCategory
-                  title="Cloud Platforms"
-                  skills={cloudPlatforms}
-                />
-                <SkillsCategory
-                  title="DevOps & Deployment"
-                  skills={devOpsDeployment}
-                />
-                <SkillsCategory
-                  title="Testing"
-                  skills={testing}
-                />
-                <SkillsCategory
-                  title="Monitoring & Reporting"
-                  skills={monitoringReporting}
-                />
-                <SkillsCategory
-                  title="Architecture & Systems"
-                  skills={architectureSystems}
-                />
-                <SkillsCategory
-                  title="Security & Access Control"
-                  skills={securityAccessControl}
-                />
-                <SkillsCategory
-                  title="Development Tools"
-                  skills={developmentTools}
-                />
-              </div>
+            </div>
+            {/* Skills Section */}
+            <div className="flex flex-col gap-8">
+              <SkillsCategory
+                title="Programming Languages"
+                skills={programmingLanguages}
+              />
+              <SkillsCategory
+                title="Frameworks & Libraries"
+                skills={frameworksLibraries}
+              />
+              <SkillsCategory
+                title="Blockchain Development"
+                skills={blockchainDevelopment}
+              />
+              <SkillsCategory
+                title="Databases"
+                skills={databases}
+              />
+              <SkillsCategory
+                title="Cloud Platforms"
+                skills={cloudPlatforms}
+              />
+              <SkillsCategory
+                title="DevOps & Deployment"
+                skills={devOpsDeployment}
+              />
+              <SkillsCategory
+                title="Testing"
+                skills={testing}
+              />
+              <SkillsCategory
+                title="Monitoring & Reporting"
+                skills={monitoringReporting}
+              />
+              <SkillsCategory
+                title="Architecture & Systems"
+                skills={architectureSystems}
+              />
+              <SkillsCategory
+                title="Security & Access Control"
+                skills={securityAccessControl}
+              />
+              <SkillsCategory
+                title="Development Tools"
+                skills={developmentTools}
+              />
+            </div>
           </main>
         </div>
       </div>

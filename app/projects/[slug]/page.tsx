@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectGallery } from "@/components/ProjectGallery";
@@ -13,6 +14,43 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = allProjects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      type: "article",
+      images: [
+        {
+          url: project.imageUrl,
+          alt: project.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [project.imageUrl],
+    },
+  };
+}
+
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -20,7 +58,7 @@ export default async function ProjectDetailPage({
 }) {
   // Await params in Next.js 16+
   const { slug } = await params;
-  
+
   const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) {
@@ -56,250 +94,250 @@ export default async function ProjectDetailPage({
 
   return (
     <div className="relative flex  min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
-      <div className="mx-auto flex w-full max-w-[960px] flex-col px-4 sm:px-8 lg:px-0">   
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-12">
-            {/* Breadcrumb */}
-            <div className="flex flex-wrap items-center gap-2">
-              <Link
-                href="/projects"
-                className="text-[#8D6E63] dark:text-[#8D6E63]/80 text-base font-medium leading-normal hover:underline"
-              >
-                All Projects
-              </Link>
-              <span className="text-[#333333]/50 dark:text-[#E0E0E0]/50 text-base font-medium leading-normal">
-                /
-              </span>
-              <span className="text-[#333333] dark:text-[#E0E0E0] text-base font-medium leading-normal">
-                {project.title}
-              </span>
-            </div>
-
-            {/* Project Header */}
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-2">
-                <h1 className="font-handwriting text-5xl md:text-7xl font-bold text-[#5D4037] dark:text-[#8D6E63]">
+      <div className="mx-auto flex w-full max-w-[960px] flex-col px-4 sm:px-8 lg:px-0">
+        <Header />
+        <main className="flex-grow">
+          <div className="container mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-12">
+              {/* Breadcrumb */}
+              <div className="flex flex-wrap items-center gap-2">
+                <Link
+                  href="/projects"
+                  className="text-[#8D6E63] dark:text-[#8D6E63]/80 text-base font-medium leading-normal hover:underline"
+                >
+                  All Projects
+                </Link>
+                <span className="text-[#333333]/50 dark:text-[#E0E0E0]/50 text-base font-medium leading-normal">
+                  /
+                </span>
+                <span className="text-[#333333] dark:text-[#E0E0E0] text-base font-medium leading-normal">
                   {project.title}
-                </h1>
-                <p className="text-lg text-[#333333]/80 dark:text-[#E0E0E0]/80">
-                  {project.description}
-                </p>
+                </span>
               </div>
-              <div className="flex flex-wrap gap-4">
-                {project.liveDemoUrl && project.liveDemoUrl !== "#" && project.liveDemoUrl.trim() !== "" && (
-                  <AnimatedButton
-                    href={project.liveDemoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </AnimatedButton>
-                )}
-                {project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "" && (
-                  <AnimatedButton
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="ghost"
-                  >
-                    View on GitHub
-                  </AnimatedButton>
-                )}
-              </div>
-            </div>
 
-            {/* Project Gallery */}
-            {(galleryImages.length > 0 || project.videoUrl) && (
-              <ProjectGallery 
-                images={galleryImages} 
-                imageAlt={project.imageAlt}
-                videoUrl={project.videoUrl}
-              />
-            )}
-
-            {/* Project Details */}
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 mt-8">
-              <div className="flex flex-col gap-10 lg:col-span-2">
-                <section>
-                  <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                    Project Overview
-                  </h2>
-                  <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
-                    {overview}
+              {/* Project Header */}
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <h1 className="font-handwriting text-5xl md:text-7xl font-bold text-[#5D4037] dark:text-[#8D6E63]">
+                    {project.title}
+                  </h1>
+                  <p className="text-lg text-[#333333]/80 dark:text-[#E0E0E0]/80">
+                    {project.description}
                   </p>
-                </section>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {project.liveDemoUrl && project.liveDemoUrl !== "#" && project.liveDemoUrl.trim() !== "" && (
+                    <AnimatedButton
+                      href={project.liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </AnimatedButton>
+                  )}
+                  {project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "" && (
+                    <AnimatedButton
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="ghost"
+                    >
+                      View on GitHub
+                    </AnimatedButton>
+                  )}
+                </div>
+              </div>
 
-                {project.keyFeatures && project.keyFeatures.length > 0 && (
-                  <section>
-                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
-                      Key Features
-                    </h2>
-                    <div className="space-y-6">
-                      {project.keyFeatures.map((feature, index) => (
-                        <div key={index} className="border-l-4 border-[#8D6E63] pl-4">
-                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-2">
-                            {feature.title}
-                          </h3>
-                          <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
-                            {feature.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </section>
-                )}
+              {/* Project Gallery */}
+              {(galleryImages.length > 0 || project.videoUrl) && (
+                <ProjectGallery
+                  images={galleryImages}
+                  imageAlt={project.imageAlt}
+                  videoUrl={project.videoUrl}
+                />
+              )}
 
-                {project.technicalHighlights && project.technicalHighlights.length > 0 && (
+              {/* Project Details */}
+              <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 mt-8">
+                <div className="flex flex-col gap-10 lg:col-span-2">
                   <section>
                     <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                      Technical Highlights
+                      Project Overview
                     </h2>
-                    <ul className="space-y-3">
-                      {project.technicalHighlights.map((highlight, index) => (
-                        <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
-                          <span className="text-[#8D6E63] mr-2 mt-1">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                      {overview}
+                    </p>
                   </section>
-                )}
 
-                {project.architecture && (
-                  <section>
-                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
-                      Architecture
-                    </h2>
-                    <div className="space-y-6">
-                      {project.architecture.designPatterns && project.architecture.designPatterns.length > 0 && (
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
-                            Design Patterns
-                          </h3>
-                          <div className="flex flex-wrap gap-2">
-                            {project.architecture.designPatterns.map((pattern, index) => (
-                              <span
-                                key={index}
-                                className="px-3 py-1 bg-[#8D6E63]/10 dark:bg-[#8D6E63]/20 text-[#5D4037] dark:text-[#8D6E63] rounded-md text-sm font-medium"
-                              >
-                                {pattern}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {project.architecture.keyComponents && project.architecture.keyComponents.length > 0 && (
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
-                            Key Components
-                          </h3>
-                          <ul className="space-y-2">
-                            {project.architecture.keyComponents.map((component, index) => (
-                              <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
-                                <span className="text-[#8D6E63] mr-2 mt-1">→</span>
-                                <span>{component}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {project.architecture.scalabilityFeatures && project.architecture.scalabilityFeatures.length > 0 && (
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
-                            Scalability Features
-                          </h3>
-                          <ul className="space-y-2">
-                            {project.architecture.scalabilityFeatures.map((feature, index) => (
-                              <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
-                                <span className="text-[#8D6E63] mr-2 mt-1">⚡</span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  </section>
-                )}
-
-                {project.codeSamples && project.codeSamples.length > 0 && (
-                  <section>
-                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
-                      Code Samples
-                    </h2>
-                    <div className="space-y-8">
-                      {project.codeSamples.map((sample, index) => (
-                        <div key={index} className="border border-[#8D6E63]/20 dark:border-[#8D6E63]/30 rounded-lg overflow-hidden">
-                          <div className="bg-[#8D6E63]/5 dark:bg-[#8D6E63]/10 px-4 py-3 border-b border-[#8D6E63]/20 dark:border-[#8D6E63]/30">
-                            <h3 className="text-lg font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-1">
-                              {sample.title}
+                  {project.keyFeatures && project.keyFeatures.length > 0 && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                        Key Features
+                      </h2>
+                      <div className="space-y-6">
+                        {project.keyFeatures.map((feature, index) => (
+                          <div key={index} className="border-l-4 border-[#8D6E63] pl-4">
+                            <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-2">
+                              {feature.title}
                             </h3>
-                            <p className="text-sm text-[#333333]/70 dark:text-[#E0E0E0]/70">
-                              {sample.description}
+                            <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                              {feature.description}
                             </p>
                           </div>
-                          <pre className="p-4 bg-[#1E1E1E] dark:bg-[#0D0D0D] text-[#D4D4D4] text-sm overflow-x-auto">
-                            <code>{sample.code}</code>
-                          </pre>
-                        </div>
-                      ))}
-                    </div>
-                  </section>
-                )}
+                        ))}
+                      </div>
+                    </section>
+                  )}
 
-                {challenges && challenges.length > 0 && (
-                  <section>
-                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                      Challenges & Solutions
-                    </h2>
-                    <div className="space-y-4">
-                      {challenges.map((challenge, index) => (
-                        <p
-                          key={index}
-                          className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body"
-                        >
-                          {challenge}
-                        </p>
-                      ))}
-                    </div>
-                  </section>
-                )}
-
-                {results && (
-                  <section>
-                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                      Results & Impact
-                    </h2>
-                    {Array.isArray(results) ? (
+                  {project.technicalHighlights && project.technicalHighlights.length > 0 && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                        Technical Highlights
+                      </h2>
                       <ul className="space-y-3">
-                        {results.map((result, index) => (
+                        {project.technicalHighlights.map((highlight, index) => (
                           <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
-                            <span className="text-[#8D6E63] mr-2 mt-1">✓</span>
-                            <span dangerouslySetInnerHTML={{ __html: result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                            <span className="text-[#8D6E63] mr-2 mt-1">•</span>
+                            <span>{highlight}</span>
                           </li>
                         ))}
                       </ul>
-                    ) : (
-                      <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
-                        {results}
-                      </p>
-                    )}
-                  </section>
-                )}
-              </div>
+                    </section>
+                  )}
 
-              {/* Sidebar */}
-              <ProjectSidebar
-                role={role}
-                roleDescription={roleDescription}
-                technologies={project.technologies}
-              />
+                  {project.architecture && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                        Architecture
+                      </h2>
+                      <div className="space-y-6">
+                        {project.architecture.designPatterns && project.architecture.designPatterns.length > 0 && (
+                          <div>
+                            <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                              Design Patterns
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                              {project.architecture.designPatterns.map((pattern, index) => (
+                                <span
+                                  key={index}
+                                  className="px-3 py-1 bg-[#8D6E63]/10 dark:bg-[#8D6E63]/20 text-[#5D4037] dark:text-[#8D6E63] rounded-md text-sm font-medium"
+                                >
+                                  {pattern}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {project.architecture.keyComponents && project.architecture.keyComponents.length > 0 && (
+                          <div>
+                            <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                              Key Components
+                            </h3>
+                            <ul className="space-y-2">
+                              {project.architecture.keyComponents.map((component, index) => (
+                                <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                                  <span className="text-[#8D6E63] mr-2 mt-1">→</span>
+                                  <span>{component}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {project.architecture.scalabilityFeatures && project.architecture.scalabilityFeatures.length > 0 && (
+                          <div>
+                            <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-3">
+                              Scalability Features
+                            </h3>
+                            <ul className="space-y-2">
+                              {project.architecture.scalabilityFeatures.map((feature, index) => (
+                                <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                                  <span className="text-[#8D6E63] mr-2 mt-1">⚡</span>
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </section>
+                  )}
+
+                  {project.codeSamples && project.codeSamples.length > 0 && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-6">
+                        Code Samples
+                      </h2>
+                      <div className="space-y-8">
+                        {project.codeSamples.map((sample, index) => (
+                          <div key={index} className="border border-[#8D6E63]/20 dark:border-[#8D6E63]/30 rounded-lg overflow-hidden">
+                            <div className="bg-[#8D6E63]/5 dark:bg-[#8D6E63]/10 px-4 py-3 border-b border-[#8D6E63]/20 dark:border-[#8D6E63]/30">
+                              <h3 className="text-lg font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-1">
+                                {sample.title}
+                              </h3>
+                              <p className="text-sm text-[#333333]/70 dark:text-[#E0E0E0]/70">
+                                {sample.description}
+                              </p>
+                            </div>
+                            <pre className="p-4 bg-[#1E1E1E] dark:bg-[#0D0D0D] text-[#D4D4D4] text-sm overflow-x-auto">
+                              <code>{sample.code}</code>
+                            </pre>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+
+                  {challenges && challenges.length > 0 && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                        Challenges & Solutions
+                      </h2>
+                      <div className="space-y-4">
+                        {challenges.map((challenge, index) => (
+                          <p
+                            key={index}
+                            className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body"
+                          >
+                            {challenge}
+                          </p>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+
+                  {results && (
+                    <section>
+                      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                        Results & Impact
+                      </h2>
+                      {Array.isArray(results) ? (
+                        <ul className="space-y-3">
+                          {results.map((result, index) => (
+                            <li key={index} className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body flex items-start">
+                              <span className="text-[#8D6E63] mr-2 mt-1">✓</span>
+                              <span dangerouslySetInnerHTML={{ __html: result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                          {results}
+                        </p>
+                      )}
+                    </section>
+                  )}
+                </div>
+
+                {/* Sidebar */}
+                <ProjectSidebar
+                  role={role}
+                  roleDescription={roleDescription}
+                  technologies={project.technologies}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
       </div>
       <Footer />
     </div>

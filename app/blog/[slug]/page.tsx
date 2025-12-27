@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthorBio } from "@/components/AuthorBio";
@@ -12,6 +13,45 @@ export async function generateStaticParams() {
   return allBlogPosts.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = allBlogPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      images: post.featuredImage
+        ? [
+          {
+            url: post.featuredImage,
+            alt: post.featuredImageAlt || post.title,
+          },
+        ]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.featuredImage ? [post.featuredImage] : [],
+    },
+  };
 }
 
 export default async function BlogPostDetailPage({

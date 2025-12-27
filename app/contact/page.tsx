@@ -1,6 +1,15 @@
+import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ContactLink } from "@/components/ContactLink";
 import { ContactForm } from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Have a project in mind or want to collaborate? Reach out to Rufus Gladness for software development and architectural consulting.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -11,9 +20,9 @@ export default function ContactPage() {
           <main className="flex flex-col gap-12 sm:gap-16 md:gap-24 px-4 py-12 md:py-20">
             <div className="flex flex-wrap justify-between gap-3 p-4">
               <div className="flex min-w-72 flex-col gap-3">
-                <p className="font-handwriting text-5xl md:text-6xl font-bold leading-tight tracking-[-0.033em] text-primary">
+                <h1 className="font-handwriting text-5xl md:text-6xl font-bold leading-tight tracking-[-0.033em] text-primary">
                   Let&apos;s build something great together.
-                </p>
+                </h1>
                 <p className="text-slate-500 dark:text-[#c8a993] text-base font-normal leading-normal">
                   Have a project in mind or just want to say hi? Feel free to
                   reach out.

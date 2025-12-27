@@ -21,6 +21,8 @@ export function ProfileHeader({
         <div
           className="mx-auto bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 ring-4 ring-offset-4 ring-[#8D7B68]/30 dark:ring-[#473324] dark:ring-offset-[#211811]"
           style={{ backgroundImage: `url(${profileImage})` }}
+          role="img"
+          aria-label={`${name}'s profile picture`}
         />
       </div>
       <div className="flex flex-col justify-center text-center md:text-left">

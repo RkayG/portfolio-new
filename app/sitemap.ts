@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { allProjects } from "@/data/projects";
-import { allBlogPosts } from "@/data/blog.ts";
+import { allBlogPosts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://rufusgladness.com";

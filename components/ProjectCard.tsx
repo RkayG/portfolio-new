@@ -92,7 +92,9 @@ export function ProjectCard({
           </Link>
         )}
         {slug && (
-          <AnimatedButton href={`/projects/${slug}`}>More</AnimatedButton>
+          <AnimatedButton href={`/projects/${slug}`}>
+            View {title}
+          </AnimatedButton>
         )}
       </div>
     </div>

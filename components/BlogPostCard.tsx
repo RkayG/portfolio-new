@@ -42,8 +42,9 @@ export function BlogPostCard({
         <Link
           href={`/blog/${slug}`}
           className="text-sm font-bold text-primary hover:underline"
+          aria-label={`Read more about ${title}`}
         >
-          Read More →
+          Read article →
         </Link>
       </div>
     </article>
