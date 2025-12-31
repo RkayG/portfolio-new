@@ -90,33 +90,28 @@ const skills = [
 const experiences = [
   {
     period: "2025 - Present",
-    title: "CTO / Lead Engineer",
-    company: "J Vortex",
+    title: "Tech Consultant",
+    company: "Talarge Ltd., United Kingdom",
     description:
-      "Leading the technical vision and architecture for a suite of software products, including Wigree, a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions. Built and mentored the core engineering team, establishing development processes, coding standards, and a culture of technical excellence. Designed a scalabale and secure architecture from the ground up, making critical technology stack decisions to balance rapid development with long-term stability.",
-  },
-  {
-    period: "June, 2025 - October, 2025",
-    title: "IT Manager",
-    company: "BettyBet",
-    description:
-      "",
+      "Leading architecture and development of comprehensive SaaS platform including Smart POS, inventory, payroll, compliance for retailers in UK market, HMRC integration and culturally-tailored features.",
   },
 
   {
     period: "2025 - Present",
-    title: "Technical Co-founder",
-    company: "Cxperia",
+    title: "CTO/Lead Developer",
+    company: "J-Vortex Inc.",
     description:
-      "Solely developed and launched the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
+      "Leading the technical vision and architecture for a suite of software products, including Wigree, a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions. ●Defined coding standards and technical strategy, ensuring 100% alignment with business goals.",
   },
+
   {
     period: "2025 - Present",
-    title: "Co-Founder & Co-Developer",
-    company: "SmartMention",
+    title: "Technical Co-founder/Lead Developer",
+    company: "Cxperia",
     description:
-      "Co-developed and launched the SmartMention platform - a social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
+      "Architected and developed the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
   },
+
   {
     period: "2025 - Present",
     title: "Contract Developer",
@@ -130,6 +125,13 @@ const experiences = [
     company: "Primegrills",
     description:
       "Engineered a high-performance, event-driven microservices architecture to replace a monolithic system, significantly improving modularity and deployment agility. Developed a custom POS ordering system using Django, React, PostgreSQL, and Redis, with RabbitMQ for message queuing and WebSockets for real-time updates. Optimised system performance to handle massive, spiking traffic loads typical for event-based businesses, ensuring 99.9% uptime and sub-second response times during peak operations.",
+  },
+  {
+    period: "June 2020 - June 2024",
+    title: "Business Manager",
+    company: "Medaville Group, Nigeria",
+    description:
+      "●Managed overall business operations for construction firm with 10+ direct employees and 40+ indirect employees and annual revenue of over 300million."
   },
   {
     period: "2024 - 2025",
