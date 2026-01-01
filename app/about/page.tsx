@@ -98,53 +98,57 @@ const experiences = [
   {
     period: "2025 - Present",
     title: "Software Developer (Consulting)",
-    company: "Kentry Limited",
-    description:
-      "Developing a suite of products as a contract developer, delivering scalable solutions across multiple product lines. Working on diverse technical challenges while maintaining high code quality and architectural standards. Contributing to product strategy and technical decision-making for various applications within the Kentry ecosystem.",
+    company: "Kentry Limited, UK",
+    points: [
+      "Developed the OnRoute dispatch system, automating real-time GPS tracking and job bidding workflows.",
+      "Delivered a mobile app and an admin oversight system streamlining logistics for private transport services, and improving business efficiency by 50%.",
+
+    ]
   },
 
   {
     period: "2025 - Present",
     title: "CTO/Lead Developer",
     company: "J-Vortex Inc.",
-    description:
-      "Leading the technical vision and architecture for a suite of software products, including Wigree, a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions. ●Defined coding standards and technical strategy, ensuring 100% alignment with business goals.",
+    points: [
+      "Leading the technical vision and architecture for a suite of software products, including Wigree - a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions.",
+      "Defined coding standards and technical strategy, ensuring 100% alignment with business goals."
+    ]
   },
 
   {
     period: "2025 - Present",
     title: "Technical Co-founder/Lead Developer",
-    company: "Cxperia",
-    description:
-      "Architected and developed the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
-  },
+    company: "Cxperia, France",
+    points: [
+      "Architected and developed a B2B2C loyalty platform for cosmetic brands, focusing on high-fidelity UX and personalized engagement.",
+      "Engineered a modular architecture that enabled 40% faster feature deployment and seamless API integrations.",
 
-
-  {
-    period: "Feb 2025 - May 2025",
-    title: "Contract Backend Developer",
-    company: "Primegrills",
-    description:
-      "Engineered a high-performance, event-driven microservices architecture to replace a monolithic system, significantly improving modularity and deployment agility. Developed a custom POS ordering system using Django, React, PostgreSQL, and Redis, with RabbitMQ for message queuing and WebSockets for real-time updates. Optimised system performance to handle massive, spiking traffic loads typical for event-based businesses, ensuring 99.9% uptime and sub-second response times during peak operations.",
+    ]
   },
   {
-    period: "June 2020 - June 2024",
+    period: "2024",
+    title: "Backend & Python Instructor",
+    company: "FuturDevs",
+    points: [
+      "Delivered a comprehensive, project-based curriculum on Backend Development and Python, covering core concepts, API design, database architecture, and scalable application patterns.",
+      "Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills."
+    ]
+  },
+  {
+    period: "2020 - 2024",
     title: "Business Manager",
     company: "Medaville Group, Nigeria",
-    description:
-      "●Managed overall business operations for construction firm with 10+ direct employees and 40+ indirect employees and annual revenue of over 300million."
+    points: [
+      "Managed overall business operations for construction firm with 10+ direct employees and 40+ indirect employees.",
+      "Oversaw annual revenue of over 300 million."
+    ]
   },
-  {
-    period: "2024 - 2025",
-    title: "Remote Backend & Python Instructor",
-    company: "FuturDevs",
-    description:
-      "Authored and delivered a comprehensive, project-based curriculum on Backend Development and Python, covering core concepts, API design, database architecture, and scalable application patterns. Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills.",
-  },
+
 ];
 
 // Show first 3 projects as featured
-const featuredProjects = allProjects.slice(0, 3);
+const featuredProjects = allProjects.slice(0, 4);
 
 export const metadata: Metadata = {
   title: "About Me",

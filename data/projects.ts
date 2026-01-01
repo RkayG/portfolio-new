@@ -81,10 +81,10 @@ export const allProjects: Project[] = [
       ],
     },
     challenges: [
-      "Creating a delightful developer experience where you write pure business logic and nothing else. The solution: a higher-order function with TypeScript generics that automatically injects validated input, authenticated user, businessId, and Prisma client into every handler. The challenge was maintaining end-to-end type safety while keeping the API dead simple.",
+      "Creating a delightful developer experience where you write pure business logic and nothing else. The solution: a higher-order function with TypeScript generics that automatically injects validated input, authenticated user, businessId, and Prisma client into every handler.",
       "Building declarative ownership verification that developers can't forget to use. The requireOwnership config lets you specify table, resourceId, and field—the framework automatically checks ownership before your handler runs. This prevents 90% of authorization bugs through architecture, not discipline.",
       "Implementing multi-tenant architecture where every handler automatically gets the correct businessId in context. Database queries are automatically scoped to the right tenant without manual checks. The challenge: sophisticated context management that prevents cross-tenant data leakage through design.",
-      "Ensuring every endpoint returns the same structure: { success: true/false, data: {...}, error: {...} }. Built a comprehensive error pipeline that catches everything (Zod errors, Prisma errors, auth failures) and transforms them into consistent, type-safe responses. Frontend devs love the predictability.",
+      "Ensuring every endpoint returns the same structure: { success: true/false, data: {...}, error: {...} }. Built a comprehensive error pipeline that catches everything (Zod errors, Prisma errors, auth failures) and transforms them into consistent, type-safe responses.",
     ],
     results: [
       "**70% reduction** in endpoint code: Write only business logic instead of repetitive boilerplate",
@@ -287,34 +287,34 @@ export const allProjects: Project[] = [
     roleDescription:
       "Designed and developed the complete portfolio website including UI/UX design, project showcase system, co-founder wizard, and all interactive features.",
   },
-  {
-    id: "5",
-    title: "Solana Liquidation Bot",
-    description:
-      "A Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
-    imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
-    imageAlt: "Solana liquidation bot architecture showing protocol integrations",
-    technologies: ["Rust", "Solana", "Anchor", "Flash Loans", "Solend", "MarginFi", "Kamino"],
-    category: "Blockchain",
-    liveDemoUrl: "",
-    githubUrl: "https://github.com/RkayG/liquidation-bot",
-    slug: "solana-liquidation-bot",
-    galleryImages: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
-    ],
-    overview:
-      "A Solana liquidation bot designed for zero-capital operation using flash loans. The bot monitors multiple lending protocols (Solend, MarginFi, Kamino) simultaneously, identifying liquidation opportunities and executing profitable trades within Solana's 400ms block times. Built with Rust for maximum performance, the system includes comprehensive risk management, transaction simulation, and real-time monitoring to ensure safe and profitable operations in a highly competitive environment.",
-    challenges: [
-      "Optimizing for Solana's 400ms block times required building an ultra-fast monitoring and execution system. The solution involved implementing efficient on-chain data parsing, priority queues for opportunity ranking, and parallel protocol monitoring to detect and act on opportunities fast.",
-      "Implementing flash loan integration across multiple protocols (Solend, MarginFi, Kamino) with different interfaces and requirements. This required creating a unified abstraction layer that handles protocol-specific differences while maintaining type safety and ensuring atomic transaction execution.",
-      "Designing comprehensive risk management systems including daily loss limits, circuit breakers, and position size controls. This required implementing stateful tracking across bot restarts, configurable thresholds, and automatic shutdown mechanisms to protect capital.",
-    ],
-
-    role: "Blockchain Developer & Systems Architect",
-    roleDescription:
-      "Designed and implemented the complete liquidation bot architecture, including protocol integrations, flash loan handling, risk management systems, and real-time monitoring infrastructure.",
-  },
+  /*  {
+     id: "5",
+     title: "Solana Liquidation Bot",
+     description:
+       "A Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
+     imageUrl:
+       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+     imageAlt: "Solana liquidation bot architecture showing protocol integrations",
+     technologies: ["Rust", "Solana", "Anchor", "Flash Loans", "Solend", "MarginFi", "Kamino"],
+     category: "Blockchain",
+     liveDemoUrl: "",
+     githubUrl: "https://github.com/RkayG/liquidation-bot",
+     slug: "solana-liquidation-bot",
+     galleryImages: [
+       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+     ],
+     overview:
+       "A Solana liquidation bot designed for zero-capital operation using flash loans. The bot monitors multiple lending protocols (Solend, MarginFi, Kamino) simultaneously, identifying liquidation opportunities and executing profitable trades within Solana's 400ms block times. Built with Rust for maximum performance, the system includes comprehensive risk management, transaction simulation, and real-time monitoring to ensure safe and profitable operations in a highly competitive environment.",
+     challenges: [
+       "Optimizing for Solana's 400ms block times required building an ultra-fast monitoring and execution system. The solution involved implementing efficient on-chain data parsing, priority queues for opportunity ranking, and parallel protocol monitoring to detect and act on opportunities fast.",
+       "Implementing flash loan integration across multiple protocols (Solend, MarginFi, Kamino) with different interfaces and requirements. This required creating a unified abstraction layer that handles protocol-specific differences while maintaining type safety and ensuring atomic transaction execution.",
+       "Designing comprehensive risk management systems including daily loss limits, circuit breakers, and position size controls. This required implementing stateful tracking across bot restarts, configurable thresholds, and automatic shutdown mechanisms to protect capital.",
+     ],
+ 
+     role: "Blockchain Developer & Systems Architect",
+     roleDescription:
+       "Designed and implemented the complete liquidation bot architecture, including protocol integrations, flash loan handling, risk management systems, and real-time monitoring infrastructure.",
+   }, */
 
   {
     id: "6",

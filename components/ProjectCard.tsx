@@ -61,7 +61,7 @@ export function ProjectCard({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-medium text-white bg-[#6b4a49]/30 dark:bg-[#473324] px-2 py-1 rounded-full"
+              className="text-xs font-medium dark:text-white bg-[#6b4a49]/10 dark:bg-[#473324] px-2 py-1 rounded-full"
             >
               {tech}
             </span>

@@ -2,7 +2,8 @@ interface Experience {
   period: string;
   title: string;
   company: string;
-  description: string;
+  description?: string;
+  points?: string[];
 }
 
 interface ExperienceSectionProps {
@@ -31,9 +32,18 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
             <p className="text-md font-medium text-[#333333]/80 dark:text-[#c8a993]">
               {exp.company}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-[#333333]/70 dark:text-[#c8a993]/80">
-              {exp.description}
-            </p>
+            {exp.description && (
+              <p className="mt-2 text-sm leading-relaxed text-[#333333]/70 dark:text-[#c8a993]/80">
+                {exp.description}
+              </p>
+            )}
+            {exp.points && (
+              <ul className="mt-2 text-sm leading-relaxed text-[#333333]/70 dark:text-[#c8a993]/80 list-disc list-outside ml-4 space-y-1">
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>
