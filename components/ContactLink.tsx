@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 interface ContactLinkProps {
   href: string;
@@ -6,6 +7,7 @@ interface ContactLinkProps {
   label: string;
   showCopy?: boolean;
   showArrow?: boolean;
+  target?: string;
 }
 
 export function ContactLink({
@@ -14,12 +16,17 @@ export function ContactLink({
   label,
   showCopy = false,
   showArrow = false,
+  target,
 }: ContactLinkProps) {
+  const [copied, setCopied] = useState(false);
+
   const handleCopy = (e: React.MouseEvent) => {
     e.preventDefault();
     if (showCopy && href.startsWith("mailto:")) {
       const email = href.replace("mailto:", "");
       navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -70,6 +77,7 @@ export function ContactLink({
     <a
       className="flex items-center gap-4 bg-transparent dark:bg-transparent px-4 min-h-14 justify-between border-b border-black/10 dark:border-b-[#473324] group"
       href={href}
+      target={target}
     >
       <div className="flex items-center gap-4">
         <div className="text-slate-500 dark:text-white/70 flex items-center justify-center rounded-lg bg-black/5 dark:bg-[#473324] shrink-0 size-10 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -83,9 +91,16 @@ export function ContactLink({
         {showCopy ? (
           <button
             onClick={handleCopy}
-            className="text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+            className="text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1"
           >
-            Copy
+            {copied ? (
+              <>
+                <span className="material-symbols-outlined text-sm">check</span>
+                Copied!
+              </>
+            ) : (
+              "Copy"
+            )}
           </button>
         ) : showArrow ? (
           <div className="text-slate-400 dark:text-white/50 group-hover:text-primary transition-colors">
@@ -96,4 +111,5 @@ export function ContactLink({
     </a>
   );
 }
+
 

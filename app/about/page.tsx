@@ -88,12 +88,19 @@ const skills = [
 ];
 
 const experiences = [
+  /*  {
+     period: "2025 - Present",
+     title: "Tech Consultant",
+     company: "Talarge Ltd., United Kingdom",
+     description:
+       "Leading architecture and development of comprehensive SaaS platform including Smart POS, inventory, payroll, compliance for retailers in UK market, HMRC integration and culturally-tailored features.",
+   }, */
   {
     period: "2025 - Present",
-    title: "Tech Consultant",
-    company: "Talarge Ltd., United Kingdom",
+    title: "Software Developer (Consulting)",
+    company: "Kentry Limited",
     description:
-      "Leading architecture and development of comprehensive SaaS platform including Smart POS, inventory, payroll, compliance for retailers in UK market, HMRC integration and culturally-tailored features.",
+      "Developing a suite of products as a contract developer, delivering scalable solutions across multiple product lines. Working on diverse technical challenges while maintaining high code quality and architectural standards. Contributing to product strategy and technical decision-making for various applications within the Kentry ecosystem.",
   },
 
   {
@@ -112,13 +119,7 @@ const experiences = [
       "Architected and developed the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
   },
 
-  {
-    period: "2025 - Present",
-    title: "Contract Developer",
-    company: "Kentry Limited",
-    description:
-      "Developing a suite of products as a contract developer, delivering scalable solutions across multiple product lines. Working on diverse technical challenges while maintaining high code quality and architectural standards. Contributing to product strategy and technical decision-making for various applications within the Kentry ecosystem.",
-  },
+
   {
     period: "Feb 2025 - May 2025",
     title: "Contract Backend Developer",
