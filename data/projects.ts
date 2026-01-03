@@ -264,7 +264,7 @@ export const allProjects: Project[] = [
     description:
       "A modern, responsive portfolio website showcasing projects, skills, and experience. Built with Next.js 16, featuring a clean design, interactive project gallery, and a co-founder wizard for potential partnerships.",
     imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765189057/portfolio_website_xdpsmy.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767440669/574_1x_shots_so_xidj6o.png",
     imageAlt: "Portfolio website showing modern design with project showcase and navigation",
     technologies: [
       "Next.js 16",
@@ -279,9 +279,9 @@ export const allProjects: Project[] = [
     githubUrl: "https://github.com/RkayG/portfolio-new",
     slug: "portfolio-website",
     galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765189057/portfolio_website_xdpsmy.png",
-    ],
-    overview:
+        "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767440669/574_1x_shots_so_xidj6o.png",
+      ],
+      overview:
       "A modern, responsive portfolio website designed and developed to showcase professional work, skills, and experience. The site features a clean, intuitive design with smooth navigation, an interactive project gallery with detailed project pages, an about section highlighting background and expertise, and an innovative co-founder wizard that allows potential partners to submit detailed partnership inquiries through a multi-step form. Built with Next.js 16 using the App Router for optimal performance, TypeScript for type safety, and Tailwind CSS for modern, responsive styling. The site uses static site generation for fast loading times and easy deployment, with a component-based architecture for maintainability and scalability.",
     role: "Designer & Developer",
     roleDescription:
