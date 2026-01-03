@@ -114,7 +114,7 @@ export const allProjects: Project[] = [
     description:
       "A B2B2C SaaS digital experience platform enabling beauty and cosmetic brands to create immersive, interactive product experiences through QR codes, tutorials, and analytics.",
     imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767441326/630shots_so_zdyusm.png",
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
     imageAlt: "Cxperia digital experience platform dashboard",
     technologies: [
       "Next.js 15",
