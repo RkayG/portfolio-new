@@ -3,12 +3,12 @@ import { Project } from "@/types/project";
 export const allProjects: Project[] = [
   {
     id: "0",
-    title: "Secure API Handler",
+    title: "Tenet",
     description:
       "A production-ready Node.js framework that eliminates 90% of repetitive backend code through sophisticated TypeScript generics and declarative configuration. Useful for building secure, multi-tenant systems with built-in authentication, authorization, caching, and observability.",
     imageUrl:
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1766083668/Gemini_Generated_Image_twjstttwjstttwjs_1_mbavub.png",
-    imageAlt: "Secure API Handler architecture diagram showing security layers",
+    imageAlt: "Tenet architecture diagram showing security layers",
     technologies: [
       "TypeScript",
       "Node.js",
@@ -24,8 +24,8 @@ export const allProjects: Project[] = [
     ],
     category: "Backend Framework / Developer Tooling",
     liveDemoUrl: "",
-    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
-    slug: "secureapihandler",
+    githubUrl: "https://github.com/RkayG/tenet",
+    slug: "Tenet",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108244/api-handler-1_fcjhjh.png",
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
@@ -122,7 +122,6 @@ export const allProjects: Project[] = [
       'Python',
       'FastAPI',
       'Redis',
-      'SecureAPIHandler',
       "Tailwind CSS",
       "Supabase",
       "PostgreSQL",
