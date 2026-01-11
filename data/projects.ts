@@ -5,10 +5,10 @@ export const allProjects: Project[] = [
     id: "0",
     title: "Tenet",
     description:
-      "An enterprise-grade API framework for Node.js that provides built-in row-level security, role-based access control, audit trails, multi-tenancy, and compliance features. It's designed to help backend devs build secure multi-tenant APIs with ease and faster. Built through sophisticated TypeScript generics and declarative configuration.",
+      "An opinionated, enterprise-grade API framework for Node.js built for security and scalability. Tenet transforms backend development by making security checks 'opt-out' by default and replacing repetitive middleware boilerplate with declarative configuration, ensuring speed to MVP and long-term maintainability.",
     imageUrl:
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767646772/Screenshot_202_nlfmfq.png",
-    imageAlt: "Tenet API framework landing page screenshot",
+    imageAlt: "Tenet API framework dashboard showing request pipeline and metrics",
     technologies: [
       "TypeScript",
       "Node.js",
@@ -17,10 +17,8 @@ export const allProjects: Project[] = [
       "Redis",
       "PostgreSQL",
       "Docker",
-      "JWT",
       "Zod",
-      "ESLint Security",
-      "SonarQube",
+
     ],
     category: "Backend Framework / Developer Tooling",
     liveDemoUrl: "",
@@ -31,82 +29,94 @@ export const allProjects: Project[] = [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765108243/api-handler-3_pxtqwu.png",
     ],
     overview:
-      "I designed and built a comprehensive API framework that transforms how teams build secure backend systems. Instead of writing hundreds of lines of boilerplate for authentication, validation, error handling, and authorization in every endpoint, developers write pure business logic in a declarative configuration. The framework handles everything else through advanced TypeScript generics that guarantee type safety from HTTP request → database → response. What makes it special? The ownership verification system that makes authorization bugs architecturally impossible—you can't forget to check if a user owns a resource because the framework does it automatically based on your configuration.",
+      "Tenet is designed to solve the common challenges of building secure, compliant, and scalable SaaS applications without reinventing the wheel. Unlike most frameworks that require you to 'opt-in' to security checks, Tenet is **Security by Default**—meaning every handler automatically enforces strict input sanitization, authentication, and rate limiting unless explicitly exempted. By leveraging a declarative configuration object (`HandlerConfig`) and first-class TypeScript support, Tenet eliminates boilerplate and guarantees that inputs and database contexts are strictly typed and safe before your business logic ever runs.",
     keyFeatures: [
       {
-        title: "Zero-Boilerplate Development",
-        description: "Write 5-10 lines instead of 50-100. A single declarative configuration gives you authentication, Zod validation, error handling, multi-tenancy, and consistent API responses automatically.",
+        title: "Security by Default",
+        description: "Security is 'opt-out', not 'opt-in'. Every handler comes with strict input sanitization, authentication checks, CSRF protection, and secure HTTP headers automatically.",
       },
       {
-        title: "Architectural Security",
-        description: "Built-in ownership verification prevents 90% of authorization bugs. Declare which resources users must own, and the framework validates it before your handler even runs—no more forgotten authorization checks.",
+        title: "Configuration over Boilerplate",
+        description: "Stop writing the same 20 lines of middleware. Use a declarative `HandlerConfig` object to describe behavior (e.g., 'Authenticated, Rate Limited'), and the framework constructs the pipeline for you.",
       },
       {
-        title: "End-to-End Type Safety",
-        description: "Sophisticated TypeScript generics propagate types from validation schemas through database queries to API responses, catching bugs at compile time rather than runtime.",
+        title: "First-Class Type Safety",
+        description: "Inputs are derived automatically from Zod schemas, and database context is generated from Prisma, ensuring the `user`, `tenant`, and `input` in api handlers are guaranteed to be present and correct.",
       },
       {
-        title: "Production-Ready Infrastructure",
-        description: "Built-in Redis caching, distributed rate limiting, API versioning, health checks, monitoring, and encryption make it ready for enterprise deployment from day one.",
+        title: "Sophisticated Request Pipeline",
+        description: "Requests traverse a rigorous 'Shield -> Context -> Guard' pipeline that handles rate limiting, tenant resolution, and validation before reaching business logic.",
       },
       {
-        title: "Multi-Tenant by Design",
-        description: "Automatic tenant isolation prevents cross-tenant data leakage. Every database query is automatically scoped to the correct business context without manual WHERE clauses.",
+        title: "Compliance Ready",
+        description: "Enforces patterns that satisfy security audits (SOC2/GDPR) out of the box, with built-in audit logging and uniform API structures.",
       },
     ],
     technicalHighlights: [
-      "Created a higher-order function pattern using TypeScript generics that injects validated input, authenticated user, tenant context, and database client into handlers",
-      "Implemented automatic ownership verification system using Prisma query interception and declarative configuration",
-      "Built a caching layer with Redis and in-memory fallback that automatically invalidates based on database mutations",
-      "Designed a comprehensive error pipeline that transforms validation errors, Prisma errors, and auth failures into consistent, type-safe API responses",
-      "Implemented distributed rate limiting using Redis with configurable windows and request limits per endpoint",
-      "Created a plugin architecture for authentication strategies (JWT, API keys, OAuth) and multi-tenancy modes (shared schema, separate databases)",
-      "Integrated security tooling including ESLint security plugins, dependency vulnerability scanning, and automated audit workflows",
+      "implemented a 'Shield, Context, Guard' pipeline architecture that validates requests in layers before execution",
+      "Created a declarative configuration system using sophisticated TypeScript generics to infer types from Zod schemas",
+      "Built automatic multi-tenancy using Prisma Client Extensions to inject row-level security logic directly into query builders",
+      "Integrated Redis for distributed infrastructure, handling rate limiting, response caching, and idempotency",
+      "Wrapped Express.js to provide modern async features and strict typing while maintaining access to its vast ecosystem",
     ],
     architecture: {
-      designPatterns: ["Higher-Order Functions", "Middleware Pipeline", "Strategy Pattern", "Factory Pattern", "Singleton Services"],
+      designPatterns: ["Pipeline Architecture", "Declarative Configuration", "Dependency Injection", "Adapter Pattern", "Guard Pattern"],
       keyComponents: [
-        "Handler Factory with TypeScript Generics",
-        "Ownership Verification Engine",
-        "Multi-Tenant Context Manager",
-        "Caching Layer with Smart Invalidation",
-        "Error Transformation Pipeline",
-        "Security Middleware Stack",
+        "The Shield (Security Headers & Sanitization)",
+        "The Context (Auth & Tenant Resolution)",
+        "The Guard (Zod Validation)",
+        "The Handler (Business Logic)",
+        "Redis Rate Limiter",
       ],
       scalabilityFeatures: [
-        "Horizontal scaling support via Redis-based rate limiting and caching",
-        "Database connection pooling and query optimization",
-        "Stateless authentication enabling containerized deployment",
-        "Feature flags for gradual rollout and experimentation",
+        "Stateless architecture suitable for containerized deployment",
+        "Distributed rate limiting via Redis",
+        "Horizontal scaling support",
+        "Efficient database connection pooling with Prisma",
       ],
     },
     challenges: [
-      "Creating a delightful developer experience where you write pure business logic and nothing else. The solution: a higher-order function with TypeScript generics that automatically injects validated input, authenticated user, businessId, and Prisma client into every handler.",
-      "Building declarative ownership verification that developers can't forget to use. The requireOwnership config lets you specify table, resourceId, and field—the framework automatically checks ownership before your handler runs. This prevents 90% of authorization bugs through architecture, not discipline.",
-      "Implementing multi-tenant architecture where every handler automatically gets the correct businessId in context. Database queries are automatically scoped to the right tenant without manual checks. The challenge: sophisticated context management that prevents cross-tenant data leakage through design.",
-      "Ensuring every endpoint returns the same structure: { success: true/false, data: {...}, error: {...} }. Built a comprehensive error pipeline that catches everything (Zod errors, Prisma errors, auth failures) and transforms them into consistent, type-safe responses.",
+      "Designing a system where security is 'opt-out' without compromising flexibility. The solution was a hierarchical configuration system where defaults are secure, but specific rules can be overridden declaratively for specific endpoints.",
+      "Achieving seamless multi-tenancy. I utilized Prisma's Client Extensions to inject security filters, ensuring that data leaks are prevented at the application level by scoping every query to the active tenant automatically.",
+      "Balancing modern developer experience with proven stability. I chose to wrap Express (battle-tested) rather than choosing a newer, less mature runtime, adding a layer of strong typing and async handling on top to get the best of both worlds.",
     ],
     results: [
-      "**70% reduction** in endpoint code: Write only business logic instead of repetitive boilerplate",
-      "**90% fewer authorization bugs**: Architectural enforcement of ownership checks eliminated entire categories of security vulnerabilities",
-      "**Consistent API contracts**: Predictable response structure across all endpoints",
-      "**Developer satisfaction**: Lets Engineers focus on what matters'",
+      "**Speed to MVP**: Startups get a production-ready foundation with Auth and Multi-Tenancy out of the box.",
+      "**Standardization**: A uniform structure means any developer can understand the codebase immediately.",
+      "**Reduced Risk**: 'Security by Default' philosophy eliminates common vulnerabilities like missing auth checks or XSS.",
+      "**Developer Experience**: strict typing and reduced boilerplate allow developers to focus 100% on unique product value.",
     ],
     codeSamples: [
       {
-        title: "Complete CRUD Endpoint with Authentication & Ownership",
-        description: "What would normally be 50+ lines of validation, auth checks, and error handling is now a clean 15-line handler",
-        code: "router.put('/projects/:id', createAuthenticatedHandler({\n  schema: z.object({ name: z.string().min(1).max(200) }),\n  requireOwnership: {\n    model: 'Project',\n    resourceIdParam: 'id',\n    ownerIdField: 'ownerId'\n  },\n  handler: async ({ input, prisma, params }) => {\n    return await prisma.project.update({\n      where: { id: params.id },\n      data: input,\n      select: { id: true, name: true, updatedAt: true }\n    });\n  }\n}));",
-      },
-      {
-        title: "Advanced Handler with Caching & Rate Limiting",
-        description: "Enterprise features like caching and rate limiting are declarative configuration, not complex implementations",
-        code: "router.get('/products', createHandler({\n  schema: z.object({ category: z.string().optional() }),\n  cache: { ttl: 300, keyGenerator: (req) => `products:${req.query.category}` },\n  rateLimit: { windowMs: 60000, maxRequests: 100 },\n  handler: async ({ input, prisma }) => {\n    return prisma.product.findMany({\n      where: input.category ? { category: input.category } : {},\n      orderBy: { createdAt: 'desc' }\n    });\n  }\n}));",
+        title: "Declarative Handler Configuration",
+        description: "Define *what* you want, not *how* to do it. The framework handles the rest.",
+        code: `export const createOrder = createAuthenticatedHandler({
+  // 1. The Guard: Strict Input Validation
+  schema: z.object({
+    productId: z.string().uuid(),
+    quantity: z.number().min(1).max(100)
+  }),
+
+  // 2. The Context: Configuration instead of middleware
+  rateLimit: { window: '1m', max: 5 },
+  audit: { action: 'ORDER_CREATED', resource: 'Order' },
+
+  // 3. The Handler: Clean, Typed Business Logic
+  handler: async ({ input, user, tenant, prisma }) => {
+    // 'input' is typed, 'user' is authenticated, 'tenant' is resolved
+    return prisma.order.create({
+      data: {
+        ...input,
+        userId: user.id,
+        tenantId: tenant.id
+      }
+    });
+  }
+});`,
       },
     ],
     role: "Architect & Developer",
-    roleDescription:
-      "Designed and developed the entire framework architecture.",
+    roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
   {
     id: "1",
@@ -278,9 +288,9 @@ export const allProjects: Project[] = [
     githubUrl: "https://github.com/RkayG/portfolio-new",
     slug: "portfolio-website",
     galleryImages: [
-        "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767440669/574_1x_shots_so_xidj6o.png",
-      ],
-      overview:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767440669/574_1x_shots_so_xidj6o.png",
+    ],
+    overview:
       "A modern, responsive portfolio website designed and developed to showcase professional work, skills, and experience. The site features a clean, intuitive design with smooth navigation, an interactive project gallery with detailed project pages, an about section highlighting background and expertise, and an innovative co-founder wizard that allows potential partners to submit detailed partnership inquiries through a multi-step form. Built with Next.js 16 using the App Router for optimal performance, TypeScript for type safety, and Tailwind CSS for modern, responsive styling. The site uses static site generation for fast loading times and easy deployment, with a component-based architecture for maintainability and scalability.",
     role: "Designer & Developer",
     roleDescription:

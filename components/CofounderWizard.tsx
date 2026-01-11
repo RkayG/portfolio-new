@@ -141,14 +141,9 @@ export function CofounderWizard() {
                 I have received your submission. I&apos;ll review your
                 details and get back to you shortly.
               </p>
-              <div className="flex w-full max-w-md flex-col sm:flex-row gap-4">
+              <div className="flex w-fit mx-auto max-w-md flex-col sm:flex-row gap-4">
                 <AnimatedButton href="/">Return to Homepage</AnimatedButton>
-                <a
-                  href="/projects"
-                  className="flex min-w-[84px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary/20 text-primary dark:bg-primary/30 dark:text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors"
-                >
-                  <span className="truncate">Explore My Projects</span>
-                </a>
+
               </div>
             </main>
           </div>
